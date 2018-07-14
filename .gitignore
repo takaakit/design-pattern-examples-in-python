@@ -1,0 +1,11 @@
+*.pyc
+*.asta.lock
+*.pyproj
+*.sln
+*.iml
+.project
+.pydevproject
+.settings/
+.vs/
+.idea/
+
