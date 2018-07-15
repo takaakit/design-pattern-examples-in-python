@@ -64,7 +64,7 @@ class File(FileSystemElement):
 
 **Python 開発環境**
 * 任意の Python 開発環境を用意してください。[PyCharm](https://www.jetbrains.com/pycharm/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/) など。
-* **Python 3.7.0** で動作確認しました。
+* **Tkinter** パッケージが必要です。**Python 3.7.0** で動作することは確認済です。
 
 
 使い方

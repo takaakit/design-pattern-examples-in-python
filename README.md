@@ -64,7 +64,7 @@ Installation
 
 **Development Environment for Python**
 * Prepare an arbitrary development environment for Python (e.g. [PyCharm](https://www.jetbrains.com/pycharm/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/)).
-* The operation has been confirmed in **Python 3.7.0**.
+* **Tkinter** package is required. The operation has been confirmed in **Python 3.7.0**.
 
 Usage
 -----
