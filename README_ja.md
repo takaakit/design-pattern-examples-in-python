@@ -82,6 +82,13 @@ class File(FileSystemElement):
 * Gamma, E. et al. Design Patterns: Elements of Reusable Object-Oriented Software, Addison-Wesley, 1994
 * 結城浩. Java 言語で学ぶデザインパターン入門. SB クリエイティブ, 2004
 
+その他のプログラミング言語
+--------------------------
+
+* [Design Pattern Examples in Ruby](https://github.com/takaakit/design-pattern-examples-in-ruby)
+* [Design Pattern Examples in Kotlin](https://github.com/takaakit/design-pattern-examples-in-kotlin)
+* [Design Pattern Examples in Scala](https://github.com/takaakit/design-pattern-examples-in-scala)
+
 Contributing
 ----
 We welcome your contributions. Function addition, bug fix, refactoring, etc.  
