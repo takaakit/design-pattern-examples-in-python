@@ -38,8 +38,8 @@ class Factory(object, metaclass=ABCMeta):
 
 
 # ˅
-from creational_patterns.abstract_factory.listFactory.list_factory import ListFactory
-from creational_patterns.abstract_factory.tableFactory.table_factory import TableFactory
+from creational_patterns.abstract_factory.list_factory.list_factory import ListFactory
+from creational_patterns.abstract_factory.table_factory.table_factory import TableFactory
 def get_factory(class_name):
     cls = globals()[class_name]
     return cls()

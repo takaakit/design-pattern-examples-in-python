@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # ˅
 from creational_patterns.abstract_factory.factory.factory import Factory
-from creational_patterns.abstract_factory.tableFactory.table_data import TableData
-from creational_patterns.abstract_factory.tableFactory.table_link import TableLink
-from creational_patterns.abstract_factory.tableFactory.table_page import TablePage
+from creational_patterns.abstract_factory.table_factory.table_data import TableData
+from creational_patterns.abstract_factory.table_factory.table_link import TableLink
+from creational_patterns.abstract_factory.table_factory.table_page import TablePage
 
 # ˄
 
