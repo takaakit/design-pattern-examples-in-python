@@ -22,9 +22,9 @@ class StrategyB(Strategy):
 
         self.__history = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
 
-        self.__pre_hand = Hand(ROCK)
+        self.__pre_hand = get_hand(ROCK)
 
-        self.__cur_hand = Hand(ROCK)
+        self.__cur_hand = get_hand(ROCK)
 
         # ˅
         pass
