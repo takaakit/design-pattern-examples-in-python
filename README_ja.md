@@ -64,8 +64,7 @@ class File(FileSystemElement):
 
 **Python 開発環境**
 * 任意の Python 開発環境を用意してください。[PyCharm](https://www.jetbrains.com/pycharm/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/) など。
-* **Tkinter** パッケージが必要です。**Python 3.7.0** で動作することは確認済です。
-
+* **Tkinter** パッケージが必要です。**Python 3.7.0** で動作確認済みです。
 
 使い方
 ------
@@ -85,9 +84,12 @@ class File(FileSystemElement):
 その他のプログラミング言語
 --------------------------
 
-* [Design Pattern Examples in Ruby](https://github.com/takaakit/design-pattern-examples-in-ruby)
+* [Design Pattern Examples in C++](https://github.com/takaakit/design-pattern-examples-in-cpp)
+* [Design Pattern Examples in Golang](https://github.com/takaakit/design-pattern-examples-in-golang)
 * [Design Pattern Examples in Kotlin](https://github.com/takaakit/design-pattern-examples-in-kotlin)
+* [Design Pattern Examples in Ruby](https://github.com/takaakit/design-pattern-examples-in-ruby)
 * [Design Pattern Examples in Scala](https://github.com/takaakit/design-pattern-examples-in-scala)
+* [Design Pattern Examples in Swift](https://github.com/takaakit/design-pattern-examples-in-swift)
 
 Contributing
 ----
