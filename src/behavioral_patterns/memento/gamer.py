@@ -57,7 +57,7 @@ class Gamer(object):
             self.money /= 2
             print('Gamer\'s money halves.')
         # In case of 6...Gamer gets desserts
-        elif dice == 5:
+        elif dice == 6:
             got_dessert = self.__get_dessert()
             print('Gamer gets desserts(' + got_dessert + ')')
             self.__desserts.append(got_dessert)
