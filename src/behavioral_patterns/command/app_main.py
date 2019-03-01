@@ -41,7 +41,7 @@ class AppMain(object):
         tk_canvas.pack(side = BOTTOM)
         tk_canvas.bind('<B1-Motion>', self.on_dragged)
 
-        self.__canvas = PaintingCanvas(tk_canvas, self.__history)
+        self.__canvas = PaintingCanvas(tk_canvas)
 
         self.__clear_button = Button(self.__frame)
         self.__clear_button['text'] = 'clear'

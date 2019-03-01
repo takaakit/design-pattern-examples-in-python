@@ -11,15 +11,12 @@ class PaintingCanvas(PaintingTarget):
 
     # ˄
 
-    def __init__(self, canvas, history):
+    def __init__(self, canvas):
 
         self.__painting_color = 'blue'
 
         # Radius of the painting point
         self.__point_radius = 6.0
-
-        # Painting history
-        self.__history = history
 
         self.__canvas = canvas
 
