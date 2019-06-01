@@ -87,10 +87,12 @@ class File(FileSystemElement):
 * [Design Pattern Examples in C#](https://github.com/takaakit/design-pattern-examples-in-csharp)
 * [Design Pattern Examples in Golang](https://github.com/takaakit/design-pattern-examples-in-golang)
 * [Design Pattern Examples in Java](https://github.com/takaakit/design-pattern-examples-in-java)
+* [Design Pattern Examples in JavaScript](https://github.com/takaakit/design-pattern-examples-in-javascript)
 * [Design Pattern Examples in Kotlin](https://github.com/takaakit/design-pattern-examples-in-kotlin)
 * [Design Pattern Examples in Ruby](https://github.com/takaakit/design-pattern-examples-in-ruby)
 * [Design Pattern Examples in Scala](https://github.com/takaakit/design-pattern-examples-in-scala)
 * [Design Pattern Examples in Swift](https://github.com/takaakit/design-pattern-examples-in-swift)
+* [Design Pattern Examples in TypeScript](https://github.com/takaakit/design-pattern-examples-in-typescript)
 
 Contributing
 ----
