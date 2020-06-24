@@ -1,8 +1,4 @@
-<iframe width="800" height="600" src="./screenshots/DiagramMap.html" frameborder="1"></iframe><br/>
-
-**Diagram Map** created by [M PLUS plug-in](https://sites.google.com/view/m-plus-plugin)
-
-<br/>
+[<img src="./screenshots/DiagramMap.svg">](./screenshots/DiagramMap.svg)
 
 Design Pattern Examples in Python
 ===
