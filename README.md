@@ -1,7 +1,4 @@
-[<img src="./screenshots/DiagramMap.svg">](http://htmlpreview.github.io/?https://github.com/takaakit/design-pattern-examples-in-python/blob/master/screenshots/DiagramMap.html)
-Click to open **Diagram Map** created by [M PLUS plug-in](https://sites.google.com/view/m-plus-plugin)
-
-<br/>
+[<img src="./screenshots/DiagramMap.svg">](https://raw.githubusercontent.com/takaakit/design-pattern-examples-in-python/master/screenshots/DiagramMap.svg)
 
 Design Pattern Examples in Python
 ===
