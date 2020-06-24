@@ -1,7 +1,11 @@
+<iframe width="800" height="600" src="./screenshots/DiagramMap.html" frameborder="1"></iframe><br/>
+
+**Diagram Map** created by [M PLUS plug-in](https://sites.google.com/view/m-plus-plugin)
+
+<br/>
+
 Design Pattern Examples in Python
 ===
-
-English | [日本語](README_ja.md)
 
 Model and code examples of design patterns for Python.  
 You can utilize this examples as follows.
