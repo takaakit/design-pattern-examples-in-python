@@ -39,14 +39,7 @@ class AppLogin(Mediator):
 
         self.create_colleagues()
         self.colleague_changed()
-
-        # Set mediators
-        self.__radio_login.mediator = self
-        self.__radio_guest.mediator = self
-        self.__text_username.mediator = self
-        self.__text_password.mediator = self
-        self.__button_ok.mediator = self
-        self.__button_cancel.mediator = self
+        self.set_mediators()
 
         self.__master.mainloop()
         # ˄
@@ -123,6 +116,17 @@ class AppLogin(Mediator):
                     self.__button_ok.set_activation(True)
                 else:
                     self.__button_ok.set_activation(False)
+        # ˄
+
+    # Set mediators
+    def set_mediators(self):
+        # ˅
+        self.__radio_login.set_mediator(self)
+        self.__radio_guest.set_mediator(self)
+        self.__text_username.set_mediator(self)
+        self.__text_password.set_mediator(self)
+        self.__button_ok.set_mediator(self)
+        self.__button_cancel.set_mediator(self)
         # ˄
 
     # ˅

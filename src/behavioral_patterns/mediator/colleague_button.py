@@ -14,10 +14,10 @@ class ColleagueButton(Colleague):
 
     def __init__(self, button):
 
+        self.__button = button
+
         # Flag indicating whether the button is pressed
         self.__is_pressed = False
-
-        self.__button = button
 
         # ˅
         super().__init__()

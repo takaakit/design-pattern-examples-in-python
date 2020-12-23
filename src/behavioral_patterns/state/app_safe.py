@@ -20,14 +20,14 @@ class AppSafe(Context):
 
         self.__master = None
 
-        # Current state
-        self.__state = DaytimeState()
-
         # Display of security center
         self.__text_message = None
 
         # Current time
         self.__text_time = None
+
+        # Current state
+        self.__state = DaytimeState()
 
         # ˅
         self.__master = Tk()

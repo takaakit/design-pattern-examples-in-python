@@ -19,6 +19,11 @@ class Colleague(object, metaclass=ABCMeta):
         pass
         # ˄
 
+    def set_mediator(self, mediator):
+        # ˅
+        self.mediator = mediator
+        # ˄
+
     # Set enable/disable from the Mediator
     @abstractmethod
     def set_activation(self, is_enable):

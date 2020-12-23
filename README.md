@@ -13,7 +13,7 @@ You can utilize this examples as follows.
 
 > UML model example:
 
-![](screenshots/CompositePattern.png "Composite Pattern")
+![](screenshots/CompositePattern.svg "Composite Pattern")
 
 > Python code example:
 
