@@ -6,19 +6,23 @@ from behavioral_patterns.chain_of_responsibility.special_supporter import Specia
 from behavioral_patterns.chain_of_responsibility.limited_supporter import LimitedSupporter
 from behavioral_patterns.chain_of_responsibility.trouble import Trouble
 
-# Someone handles a trouble.
+'''
+A trouble is turned around among supporters, and the trouble will be handled by the supporter who can handle it. There are four types of supporters below:
+* "LazySupporter" doesn't handle any trouble
+* "MoodySupporter" handles odd ID troubles
+* "SpecialSupporter" handles a trouble of the target ID.
+* "LimitedSupporter" handles troubles below the limit ID.
+'''
 
 if __name__ == '__main__':
     emily = LazySupporter('Emily')
     william = MoodySupporter('William')
-    amelia = SpecialSupporter('Amelia', 153)
-    michael = LimitedSupporter('Michael', 340)
-    joseph = LimitedSupporter('Joseph', 250)
-    lily = LimitedSupporter('Lily', 350)
+    amelia = SpecialSupporter('Amelia', 6)
+    joseph = LimitedSupporter('Joseph', 5)
 
     # Make a chain.
-    emily.set_next(william).set_next(amelia).set_next(michael).set_next(joseph).set_next(lily)
+    emily.set_next(william).set_next(amelia).set_next(joseph)
 
     # Various troubles occurred.
-    for i in range(0, 500, 17):
+    for i in range(0, 10):
         emily.support(Trouble(i))

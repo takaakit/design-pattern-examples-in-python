@@ -41,7 +41,7 @@ class PlainTextBuilder(Builder):
     def create_items(self, items):
         # ˅
         for item in items:
-            self.__buffer.append('  - ' + item + '\n')          # Items
+            self.__buffer.append('  - ' + item + '\n')              # Items
         self.__buffer.append('\n')                                  # Blank line
         # ˄
 

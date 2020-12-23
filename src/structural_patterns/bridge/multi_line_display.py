@@ -17,7 +17,7 @@ class MultiLineDisplay(Display):
         # ˄
 
     # Repeat display for the specified number of times
-    def display_multiple(self, times):
+    def output_multiple(self, times):
         # ˅
         self.open()
         for i in range(times):

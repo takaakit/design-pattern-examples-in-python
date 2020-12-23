@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 from creational_patterns.singleton.singleton import Singleton
 
-# Check whether the same instance is obtained.
+'''
+Check whether the same instance is obtained.
+'''
 
 if __name__ == '__main__':
     obj_1 = Singleton.get_instance()

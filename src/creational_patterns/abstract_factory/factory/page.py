@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
+import os
 from abc import *
-from creational_patterns.abstract_factory.factory.item import Item
 
 # ˄
 
@@ -42,6 +42,7 @@ class Page(object, metaclass=ABCMeta):
         file.write(self.to_html())
         file.close()
         print(file_name + ' has been created.')
+        print('Output File: ' + os.path.join(os.getcwd(), file_name))
         # ˄
 
     # ˅

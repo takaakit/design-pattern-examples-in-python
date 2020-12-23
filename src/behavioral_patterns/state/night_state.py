@@ -14,7 +14,7 @@ class NightState(State):
     # Set time
     def set_time(self, context, hour):
         # ˅
-        if 9 <= hour and hour < 17:
+        if 9 <= hour < 17:
             from behavioral_patterns.state.daytime_state import DaytimeState
             context.change_state(DaytimeState())
         # ˄

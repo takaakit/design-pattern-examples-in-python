@@ -13,18 +13,33 @@ class Directory(FileSystemElement):
 
     def __init__(self, name):
 
+        self.__name = name
+
         self.__elements = []
 
         # ˅
-        super().__init__(name, 0)
+        super().__init__()
         # ˄
 
-    # Print this element with the "upperPath".
+    def get_name(self):
+        # ˅
+        return self.__name
+        # ˄
+
+    def get_size(self):
+        # ˅
+        size = 0
+        for element in self.__elements:
+            size += element.get_size()
+        return size
+        # ˄
+
+    # Print this element with the "upper_path".
     def print(self, upper_path):
         # ˅
         print(upper_path + '/' + self.to_string())
         for element in self.__elements:
-            element.print(upper_path + '/' + self.name)
+            element.print(upper_path + '/' + self.get_name())
         # ˄
 
     # Add a element
@@ -35,7 +50,7 @@ class Directory(FileSystemElement):
         # ˄
 
     # ˅
-
+    
     # ˄
 
 

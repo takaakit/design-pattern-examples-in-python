@@ -16,12 +16,14 @@ class Display(object, metaclass=ABCMeta):
         pass
         # ˄
 
+    # Column width
     @abstractmethod
     def get_columns(self):
         # ˅
         pass
         # ˄
 
+    # Number of rows
     @abstractmethod
     def get_rows(self):
         # ˅

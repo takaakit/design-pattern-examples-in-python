@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # ˅
 from behavioral_patterns.iterator.aggregate import Aggregate
+from behavioral_patterns.iterator.book_shelf_iterator import BookShelfIterator
 
 # ˄
 
@@ -23,7 +24,6 @@ class BookShelf(Aggregate):
 
     def iterator(self):
         # ˅
-        from behavioral_patterns.iterator.book_shelf_iterator import BookShelfIterator
         return BookShelfIterator(self)
         # ˄
 

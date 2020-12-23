@@ -3,29 +3,43 @@
 from behavioral_patterns.interpreter.program import Program
 from behavioral_patterns.interpreter.context import Context
 
-"""
-Analyze the syntax of the mini-language composed of "forward", "left", "right", and "repeat" commands.
-
------
+'''
+An interpreter for mini language to operate radio controlled car. It parses the following syntax composed of "forward", "left", "right", and "repeat" commands:
+```
+<program>      ::= program <command list>
+<command list> ::= <command>* end
+<command>      ::= <repeat> | <action>
+<repeat>       ::= repeat <number> <command list>
+<action>       ::= forward | right | left
+<number>       ::= 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
+```
+___
 Examples before and after syntax analysis.
-* Ex.1
+
+Ex.1
+```
 Before : "program end"
-After  : [program []]
+After  : [program ]
+```
 
-* Ex.2
+Ex.2
+```
 Before : "program forward right left end"
-After  : [program [forward, right, left]]
+After  : [program forward, right, left]
+```
 
-* Ex.3
+Ex.3
+```
 Before : "program repeat 4 forward right end end"
-After  : [program [[repeat 4 [forward, right]]]]
-"""
+After  : [program [repeat 4 forward, right]]
+```
+'''
 
 if __name__ == '__main__':
     with open('./program.txt') as fh:
         for line in fh:
             line = line.strip()
-            print('TEXT > \"' + line + '\"')
+            print('Before : \"' + line + '\"')
             node = Program()
             node.parse(Context(line))
-            print('NODE > ' + node.to_string())
+            print('After  : ' + node.to_string())

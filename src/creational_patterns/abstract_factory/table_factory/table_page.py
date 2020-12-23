@@ -21,7 +21,7 @@ class TablePage(Page):
         buffer = []
         buffer.append('<html><head><title>' + self.title + '</title></head><body>\n')
         buffer.append('<h1>' + self.title + '</h1>\n')
-        buffer.append('<table width=\"80%\" border=\"3\">\n')
+        buffer.append('<table width="80%" border="3">\n')
         for content in self.contents:
             buffer.append('<tr>' + content.to_html() + '</tr>\n')
         buffer.append('</table>\n')

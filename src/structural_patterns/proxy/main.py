@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 from structural_patterns.proxy.printer_proxy import PrinterProxy
 
-# At the time of printing, create an instance of the printer for the first time.
-# In order to spend time creating a printer, call a heavy task when creating a printer instance.
+'''
+Print on a named printer. Setting and changing the printer name is done by Proxy("PrinterProxy"). At the time of printing, create an instance of the RealSubject("RealPrinter") for the first time.
+'''
 
 if __name__ == '__main__':
-    p = PrinterProxy('Emily\'s printer')
+    p = PrinterProxy('PRINTER-A')
     print('The current printer is ' + p.get_printer_name() + '.')
-    p.set_printer_name('William\'s printer')
+    p.set_printer_name('PRINTER-B')
     print('The current printer is ' + p.get_printer_name() + '.')
     p.output('Nice to meet you.')

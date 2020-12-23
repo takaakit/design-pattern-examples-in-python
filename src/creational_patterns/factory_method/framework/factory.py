@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # ˅
 from abc import *
-from creational_patterns.factory_method.framework.product import Product
 
 # ˄
 

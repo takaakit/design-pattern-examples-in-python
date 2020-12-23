@@ -20,11 +20,13 @@ class MessageDisplay(Display):
         pass
         # ˄
 
+    # Number of characters
     def get_columns(self):
         # ˅
         return len(self.__message)
         # ˄
 
+    # The number of rows is 1
     def get_rows(self):
         # ˅
         return 1

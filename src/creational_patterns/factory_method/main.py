@@ -2,7 +2,9 @@
 # -*- coding: utf-8 -*-
 from creational_patterns.factory_method.id_card.credit_card_factory import CreditCardFactory
 
-# Factory to make ID cards.
+'''
+Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+'''
 
 if __name__ == '__main__':
     factory = CreditCardFactory()

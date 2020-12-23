@@ -18,7 +18,7 @@ class TableLink(Link):
 
     def to_html(self):
         # ˅
-        return '  <td><a href=\"' + self.url + '\">' + self.name + '</a></td>\n'
+        return '  <td><a href="' + self.url + '">' + self.name + '</a></td>\n'
         # ˄
 
     # ˅

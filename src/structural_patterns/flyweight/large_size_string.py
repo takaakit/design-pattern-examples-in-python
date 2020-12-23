@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-from structural_patterns.flyweight.large_size_char import LargeSizeChar
 from structural_patterns.flyweight.large_size_char_factory import LargeSizeCharFactory
 
 # ˄

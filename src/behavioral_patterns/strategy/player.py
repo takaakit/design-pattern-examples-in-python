@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-from behavioral_patterns.strategy.strategy import Strategy
+from behavioral_patterns.strategy.game_result_type import GameResultType
 
 # ˄
 
@@ -27,32 +27,25 @@ class Player(object):
         pass
         # ˄
 
-    # Calculate a hand from the strategy.
-    def next_hand(self):
+    # Show a hand signal from the strategy.
+    def show_hand_signal(self):
         # ˅
-        return self.__strategy.next_hand()
+        return self.__strategy.show_hand_signal()
         # ˄
 
-    # Won a game.
-    def won(self):
+    # Notify a game result.
+    def notify_game_result(self, result, own_hand, opponents_hand):
         # ˅
-        self.__strategy.learn(True)
-        self.__win_count += 1
-        self.__game_count += 1
-        # ˄
+        if result == GameResultType.WIN:
+            self.__win_count += 1
+            self.__game_count += 1
+        elif result == GameResultType.LOSS:
+            self.__loss_count += 1
+            self.__game_count += 1
+        elif result == GameResultType.DRAW:
+            self.__game_count += 1
 
-    # Lost a game.
-    def lost(self):
-        # ˅
-        self.__strategy.learn(False)
-        self.__loss_count += 1
-        self.__game_count += 1
-        # ˄
-
-    # Drew a game.
-    def drew(self):
-        # ˅
-        self.__game_count += 1
+        self.__strategy.notify_game_result(result, own_hand, opponents_hand)
         # ˄
 
     def to_string(self):

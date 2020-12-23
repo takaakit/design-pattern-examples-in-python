@@ -1,26 +1,35 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
+from abc import *
 
 # ˄
 
 
-class FileSystemElement(object):
+class FileSystemElement(object, metaclass=ABCMeta):
     # ˅
 
     # ˄
 
-    def __init__(self, name, size):
-
-        self.name = name
-
-        self.size = size
-
+    def __init__(self):
         # ˅
         pass
         # ˄
 
-    # Print this element with the "upperPath".
+    @abstractmethod
+    def get_name(self):
+        # ˅
+        pass
+        # ˄
+
+    @abstractmethod
+    def get_size(self):
+        # ˅
+        pass
+        # ˄
+
+    # Print this element with the "upper_path".
+    @abstractmethod
     def print(self, upper_path):
         # ˅
         pass
@@ -28,7 +37,7 @@ class FileSystemElement(object):
 
     def to_string(self):
         # ˅
-        return self.name + ' (' + str(self.size) + ')'
+        return self.get_name() + ' (' + str(self.get_size()) + ')'
         # ˄
 
     # ˅

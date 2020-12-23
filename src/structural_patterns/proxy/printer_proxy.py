@@ -34,7 +34,7 @@ class PrinterProxy(Printer):
         # ˅
         if self.__real is not None:
             self.__real.printer_name = value
-            self.__current_name = value
+        self.__current_name = value
         # ˄
 
     def output(self, content):

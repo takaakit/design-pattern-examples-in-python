@@ -5,9 +5,9 @@
 # ˄
 
 
-class Hand(object):
+class HandSignal(object):
     # ˅
-
+    
     # ˄
 
     def __init__(self, value):
@@ -48,7 +48,7 @@ class Hand(object):
         # ˄
 
     # ˅
-
+    
     # ˄
 
 
@@ -60,7 +60,7 @@ SCISSORS = 1    # Scissors
 PAPER = 2       # Paper
 
 # Characters of the hands
-hands = [Hand(ROCK), Hand(SCISSORS), Hand(PAPER)]
+hands = [HandSignal(ROCK), HandSignal(SCISSORS), HandSignal(PAPER)]
 
 # Characters of the hands
 name = ['Rock', 'Scissors', 'Paper']

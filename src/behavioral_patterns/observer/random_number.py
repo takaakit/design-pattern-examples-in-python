@@ -20,7 +20,7 @@ class RandomNumber(Number):
 
     def generate(self):
         # ˅
-        for i in range(0, 20, 1):
+        for i in range(0, 20):
             self.value = random.randrange(50)
             self.notify_observers()
         # ˄

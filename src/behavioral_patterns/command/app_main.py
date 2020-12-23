@@ -43,15 +43,15 @@ class AppMain(object):
 
         self.__canvas = PaintingCanvas(tk_canvas)
 
-        self.__clear_button = Button(self.__frame)
-        self.__clear_button['text'] = 'clear'
-        self.__clear_button.bind('<Button-1>', self.clear)
-        self.__clear_button.pack(side = LEFT)
-
         self.__undo_button = Button(self.__frame)
         self.__undo_button['text'] = 'undo'
         self.__undo_button.bind('<Button-1>', self.undo)
         self.__undo_button.pack(side = LEFT)
+
+        self.__clear_button = Button(self.__frame)
+        self.__clear_button['text'] = 'clear'
+        self.__clear_button.bind('<Button-1>', self.clear)
+        self.__clear_button.pack(side = LEFT)
         # ˄
 
     def on_dragged(self, event):

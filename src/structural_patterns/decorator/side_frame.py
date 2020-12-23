@@ -20,11 +20,13 @@ class SideFrame(Frame):
         super().__init__(display)
         # ˄
 
+    # Number of characters added left and right decoration characters
     def get_columns(self):
         # ˅
         return 1 + self.display.get_columns() + 1
         # ˄
 
+    # Number of lines
     def get_rows(self):
         # ˅
         return self.display.get_rows()

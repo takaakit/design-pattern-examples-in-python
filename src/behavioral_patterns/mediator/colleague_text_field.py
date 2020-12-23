@@ -20,6 +20,7 @@ class ColleagueTextField(Colleague):
         self.__text_field = text_field
 
         # ˅
+        super().__init__()
         self.__text_field.bind("<KeyRelease>", self.__on_key_released)
         # ˄
 

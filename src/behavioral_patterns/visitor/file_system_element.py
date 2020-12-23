@@ -12,19 +12,21 @@ class FileSystemElement(Element, metaclass=ABCMeta):
 
     # ˄
 
-    def __init__(self, name, size):
+    @abstractmethod
+    def get_name(self):
+        # ˅
+        pass
+        # ˄
 
-        self.name = name
-
-        self.size = size
-
+    @abstractmethod
+    def get_size(self):
         # ˅
         pass
         # ˄
 
     def to_string(self):
         # ˅
-        return self.name + ' (' + str(self.size) + ')'
+        return self.get_name() + ' (' + str(self.get_size()) + ')'
         # ˄
 
     # ˅

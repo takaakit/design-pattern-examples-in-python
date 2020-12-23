@@ -1,31 +1,31 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import os
 import sys
 from creational_patterns.builder.directory import Directory
 from creational_patterns.builder.plain_text_builder import PlainTextBuilder
 from creational_patterns.builder.html_builder import HTMLBuilder
 
-# Create documents in HTML format and text format.
-
-def show_usage():
-    print('Usage 1: python main.py plain      <- Create a document in plain text.')
-    print('Usage 2: python main.py html       <- Create a document in HTML.')
+'''
+Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+'''
 
 if __name__ == '__main__':
-    args = sys.argv
-    if len(args) != 2:
-        show_usage()
-    elif args[1] == 'plain':
+    input_value = input('Please enter "plain" or "html": ')
+
+    if input_value == 'plain':
         plain_text_builder = PlainTextBuilder()
         directory = Directory(plain_text_builder)
         directory.build()
         content = plain_text_builder.result
         print(content)
-    elif args[1] == 'html':
+    elif input_value == 'html':
         html_builder = HTMLBuilder()
         directory = Directory(html_builder)
         directory.build()
         file_name = html_builder.result
         print(file_name + ' has been created.')
+        print('Output File: ' + os.path.join(os.getcwd(), file_name))
     else:
-        show_usage()
+        print('The value is not "plain" or "html".')
+        sys.exit(1)

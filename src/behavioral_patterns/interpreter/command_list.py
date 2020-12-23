@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # ˅
 from behavioral_patterns.interpreter.node import Node
+from behavioral_patterns.interpreter.command import Command
 
 # ˄
 
@@ -21,7 +22,6 @@ class CommandList(Node):
 
     def parse(self, context):
         # ˅
-        from behavioral_patterns.interpreter.command import Command
         while True:
             if context.get_token() is None:
                 exit('Missing \'end\'')

@@ -15,17 +15,8 @@ class Memento(object):
         # Money
         self.money = money
 
-        # Desserts
-        self.desserts = []
-
         # ˅
         pass
-        # ˄
-
-    # Add a dessert
-    def add_dessert(self, dessert):
-        # ˅
-        self.desserts.append(dessert)
         # ˄
 
     # ˅

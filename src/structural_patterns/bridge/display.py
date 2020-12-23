@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-from structural_patterns.bridge.display_impl import DisplayImpl
 
 # ˄
 
@@ -19,7 +18,7 @@ class Display(object):
         pass
         # ˄
 
-    def display(self):
+    def output(self):
         # ˅
         self.open()
         self.write()

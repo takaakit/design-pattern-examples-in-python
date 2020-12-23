@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # ˅
 from tkinter import *
-from tkinter import ttk
 from behavioral_patterns.mediator.colleague_button import ColleagueButton
 from behavioral_patterns.mediator.colleague_radio_button import ColleagueRadioButton
 from behavioral_patterns.mediator.colleague_text_field import ColleagueTextField
@@ -41,6 +40,7 @@ class AppLogin(Mediator):
         self.create_colleagues()
         self.colleague_changed()
 
+        # Set mediators
         self.__radio_login.mediator = self
         self.__radio_guest.mediator = self
         self.__text_username.mediator = self

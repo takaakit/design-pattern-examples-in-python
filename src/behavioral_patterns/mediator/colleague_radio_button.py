@@ -20,6 +20,7 @@ class ColleagueRadioButton(Colleague):
         self.__radio_button = radio_button
 
         # ˅
+        super().__init__()
         self.__radio_button.bind('<ButtonRelease-1>', self.__on_mouse_released)
         # ˄
 

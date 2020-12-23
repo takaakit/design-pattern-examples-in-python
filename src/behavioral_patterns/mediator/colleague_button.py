@@ -20,6 +20,7 @@ class ColleagueButton(Colleague):
         self.__button = button
 
         # ˅
+        super().__init__()
         self.__button.bind("<ButtonPress-1>", self.__on_mouse_pressed)
         self.__button.bind("<ButtonRelease-1>", self.__on_mouse_released)
         # ˄

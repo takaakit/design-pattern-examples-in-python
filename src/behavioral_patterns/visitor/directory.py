@@ -13,11 +13,13 @@ class Directory(FileSystemElement):
 
     def __init__(self, name):
 
+        self.__name = name
+
         # Collection of elements
         self.__elements = []
 
         # ˅
-        super().__init__(name, 0)
+
         # ˄
 
     # Accept a visitor
@@ -39,8 +41,23 @@ class Directory(FileSystemElement):
         return iter(self.__elements)
         # ˄
 
-    # ˅
+    # Directory name
+    def get_name(self):
+        # ˅
+        return self.__name
+        # ˄
 
+    # Directory size
+    def get_size(self):
+        # ˅
+        size = 0
+        for element in self.__elements:
+            size += element.get_size()
+        return size
+        # ˄
+
+    # ˅
+    
     # ˄
 
 

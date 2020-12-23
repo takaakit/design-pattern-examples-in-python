@@ -23,8 +23,10 @@ class RealPrinter(Printer):
     # Display a content with the name
     def output(self, content):
         # ˅
-        print('=== ' + self.printer_name + ' ===')
+        print('==========')
         print(content)
+        print('Printed by ' + self.printer_name)
+        print('==========')
         # ˄
 
     # Heavy task (Please think so...)

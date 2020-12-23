@@ -1,14 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-from tkinter import *
-from tkinter import ttk
-from tkinter.scrolledtext import *
-from behavioral_patterns.state.context import Context
-from behavioral_patterns.state.state import State
-from behavioral_patterns.state.daytime_state import DaytimeState
 import threading
 from time import sleep
+from tkinter import *
+from tkinter.scrolledtext import *
+from behavioral_patterns.state.context import Context
+from behavioral_patterns.state.daytime_state import DaytimeState
 
 # ˄
 
@@ -53,11 +51,11 @@ class AppSafe(Context):
         button_frame.pack()
 
         button_use = Button(button_frame, text = 'Use a safe')
-        button_use.bind("<Button-1>", self.__use_safe)            # Safe use button pressed
+        button_use.bind("<Button-1>", self.__use_safe)           # Safe use button pressed
         button_use.grid(row = 0, column = 0)
 
         button_alarm = Button(button_frame, text = 'Sound an emergency bell')
-        button_alarm.bind("<Button-1>", self.__sound_bell)        # Emergency bell button pressed
+        button_alarm.bind("<Button-1>", self.__sound_bell)       # Emergency bell button pressed
         button_alarm.grid(row = 0, column = 1)
 
         button_phone = Button(button_frame, text = 'Make a call')
@@ -69,6 +67,7 @@ class AppSafe(Context):
         button_exit.grid(row = 0, column = 3)
 
         count_time_thread = threading.Thread(target = self.count_time)
+        count_time_thread.setDaemon(True)
         count_time_thread.start()
 
         self.__master.mainloop()
@@ -129,7 +128,7 @@ class AppSafe(Context):
 
     def count_time(self):
         # ˅
-        while(True):
+        while True:
             for hour in range(0, 23, 1):
                 self.set_time(hour)      # Set the time
                 sleep(1)

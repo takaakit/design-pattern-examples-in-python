@@ -3,32 +3,31 @@
 from time import sleep
 from behavioral_patterns.memento.gamer import Gamer
 
-"""
-Dice game collecting fruits.
-
+'''
+A dice game in which money increases and decreases:
 * A gamer shakes a dice and the number determine the next state.
-* Gamer's money increases or decreases depending on the number. The gamer sometimes gets desserts.
-* The game is over if the gamer's money runs out.
-"""
+* If the number of dice is even, gamer's money doubles, and if it is odd, gamer's money is halved.
+* If the gamer's money is less than half of the highest amount, it returns to the highest amount.
+* The game is repeated.
+'''
 
 if __name__ == '__main__':
-    gamer = Gamer(100)
-    memento = gamer.create_memento()
+    gamer = Gamer(100)                      # The initial money is 100
+    memento = gamer.create_memento()        # Save the initial state
 
-    for i in range(0, 99, 1):
-        print('==== ' + str(i))
-        print('Current state: ' + gamer.to_string())
+    for i in range(0, 10):
+        print('==== Turn ' + str(i + 1))    # Display count
 
-        gamer.play()
+        gamer.play()                        # Play a game
 
-        print('Gamer\'s money is ' + str(gamer.money) + '.')
-
+        # Determine the behavior of the Memento
         if gamer.money > memento.money:
-            print('(Save the current state because money has increased.)')
+            print('(Gamers\' money is the highest ever, so record the current state.)')
             memento = gamer.create_memento()
         elif gamer.money < memento.money / 2:
-            print('(Go back to the previous state because money has decreased.)')
+            print('(Gamer\'s money is less than half of the highest amount, so return to the recorded state.)')
             gamer.restore_memento(memento)
+            print('Gamer\'s money returns to ' + str(gamer.money) + '.')
 
         sleep(1)
 

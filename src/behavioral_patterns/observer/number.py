@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 # ˅
 from abc import *
-from behavioral_patterns.observer.observer import Observer
 
 # ˄
 

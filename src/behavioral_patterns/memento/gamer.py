@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # ˅
 import random
+import sys
+
 from behavioral_patterns.memento.memento import Memento
 
 # ˄
@@ -17,12 +19,6 @@ class Gamer(object):
         # Gamer's money
         self.money = money
 
-        # Acquired desserts 
-        self.__desserts = []
-
-        # Dessert name table
-        self.__desserts_name = ['Cake', 'Candy', 'Cookie']
-
         # ˅
         pass
         # ˄
@@ -31,9 +27,6 @@ class Gamer(object):
     def create_memento(self):
         # ˅
         memento = Memento(self.money)
-        it_desserts = iter(self.__desserts)
-        for it in it_desserts:
-            memento.add_dessert(it)
         return memento
         # ˄
 
@@ -41,43 +34,31 @@ class Gamer(object):
     def restore_memento(self, memento):
         # ˅
         self.money = memento.money
-        self.__desserts = memento.desserts
         # ˄
 
     # Play a game
     def play(self):
         # ˅
-        dice = random.randrange(1, 6, 1)
-        # In case of 1...Gamer's money increases
-        if dice == 1:
-            self.money += 100
-            print('Gamer\'s money increases.')
-        # In case of 2...Gamer's money halves
-        elif dice == 2:
+        dice = random.randrange(1, 6, 1)    # Shake a dice
+
+        pre_money = self.money
+        if dice == 1 or dice == 3 or dice == 5:
+            # In case of odd...Money is halved
             self.money /= 2
-            print('Gamer\'s money halves.')
-        # In case of 6...Gamer gets desserts
-        elif dice == 6:
-            got_dessert = self.__get_dessert()
-            print('Gamer gets desserts(' + got_dessert + ')')
-            self.__desserts.append(got_dessert)
-        # Other...Nothing happens
+            print('Gamer\'s money is halved: ' + str(pre_money) + ' -> ' + str(self.money))
+        elif dice == 2 or dice == 4 or dice == 6:
+            # In case of even...Money doubles
+            self.money /= 2
+            print('Gamer\'s money doubles: ' + str(pre_money) + ' -> ' + str(self.money))
         else:
-            print('Nothing happens.')
+            # Other...Exit
+            print('Unexpected value.')
+            sys.exit(1)
         # ˄
 
     def to_string(self):
         # ˅
-        return '[money = ' + str(self.money) + ', desserts = ' + self.__desserts.__str__() + ']'
-        # ˄
-
-    # Get a dessert
-    def __get_dessert(self):
-        # ˅
-        prefix = ''
-        if random.randrange(0, 2, 1):
-            prefix = 'Delicious '
-        return prefix + self.__desserts_name[random.randrange(0, 2, 1)]
+        return '[money = ' + str(self.money) + ']'
         # ˄
 
     # ˅

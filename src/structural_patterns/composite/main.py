@@ -3,33 +3,29 @@
 from structural_patterns.composite.directory import Directory
 from structural_patterns.composite.file import File
 
-# Represents a file system composed of files and directories.
+'''
+Represents a file system composed of files and directories. "FileSystemElement" makes it possible to treat "File" and "Directory" uniformly.
+'''
 
 if __name__ == '__main__':
     print('Create a file system...')
-    root_dir = Directory('root')
-    home_dir = Directory('home')
+
     bin_dir = Directory('bin')
-    etc_dir = Directory('etc')
+    bin_dir.add(File('ls', 20))
+    bin_dir.add(File('mkdir', 40))
+
     emily_dir = Directory('emily')
+    emily_dir.add(File('homework.doc', 60))
+
     james_dir = Directory('james')
-    olivia_dir = Directory('olivia')
+    james_dir.add(File('app.exe', 80))
 
-    root_dir.add(home_dir)
-    root_dir.add(bin_dir)
-    root_dir.add(etc_dir)
-
-    bin_dir.add(File('ls', 100))
-    bin_dir.add(File('mkdir', 50))
+    home_dir = Directory('home')
     home_dir.add(emily_dir)
     home_dir.add(james_dir)
-    home_dir.add(olivia_dir)
 
-    emily_dir.add(File('homework.doc', 40))
-    james_dir.add(File('homework.doc', 50))
-    james_dir.add(File('app.exe', 60))
-    olivia_dir.add(File('homework.doc', 70))
-    olivia_dir.add(File('app.exe', 80))
-    olivia_dir.add(File('tips.html', 90))
+    root_dir = Directory('root')
+    root_dir.add(home_dir)
+    root_dir.add(bin_dir)
 
     root_dir.print('')

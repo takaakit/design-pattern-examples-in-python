@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-from creational_patterns.prototype.framework.display import Display
 
 # ˄
 
