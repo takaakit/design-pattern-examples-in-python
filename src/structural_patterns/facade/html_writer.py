@@ -7,7 +7,7 @@
 
 class HtmlWriter(object):
     # ˅
-
+    
     # ˄
 
     def __init__(self, html_file_name):
@@ -53,7 +53,7 @@ class HtmlWriter(object):
         # ˄
 
     # ˅
-
+    
     # ˄
 
 

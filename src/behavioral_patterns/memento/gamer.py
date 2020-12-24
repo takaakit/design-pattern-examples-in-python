@@ -44,11 +44,11 @@ class Gamer(object):
         pre_money = self.money
         if dice == 1 or dice == 3 or dice == 5:
             # In case of odd...Money is halved
-            self.money /= 2
+            self.money = int(self.money / 2)
             print('Gamer\'s money is halved: ' + str(pre_money) + ' -> ' + str(self.money))
         elif dice == 2 or dice == 4 or dice == 6:
             # In case of even...Money doubles
-            self.money /= 2
+            self.money = int(self.money * 2)
             print('Gamer\'s money doubles: ' + str(pre_money) + ' -> ' + str(self.money))
         else:
             # Other...Exit

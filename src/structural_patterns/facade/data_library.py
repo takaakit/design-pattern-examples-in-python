@@ -8,7 +8,7 @@ import configparser
 
 class DataLibrary(object):
     # ˅
-
+    
     # ˄
 
     # Read a data library file.
@@ -21,7 +21,7 @@ class DataLibrary(object):
         # ˄
 
     # ˅
-
+    
     # ˄
 
 

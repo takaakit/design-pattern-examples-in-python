@@ -13,9 +13,6 @@ class CreditCardFactory(Factory):
     # ˄
 
     def __init__(self):
-
-        self.__card_owners = []
-
         # ˅
         pass
         # ˄
@@ -23,16 +20,6 @@ class CreditCardFactory(Factory):
     def create_product(self, owner):
         # ˅
         return CreditCard(owner)
-        # ˄
-
-    def register_product(self, product):
-        # ˅
-        self.__card_owners.append(product)
-        # ˄
-
-    def get_card_owner(self):
-        # ˅
-        return self.__card_owners
         # ˄
 
     # ˅

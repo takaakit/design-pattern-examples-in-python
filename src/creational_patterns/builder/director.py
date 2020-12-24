@@ -5,7 +5,7 @@
 # ˄
 
 
-class Directory(object):
+class Director(object):
     # ˅
 
     # ˄

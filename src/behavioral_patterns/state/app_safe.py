@@ -18,19 +18,18 @@ class AppSafe(Context):
 
     def __init__(self):
 
-        self.__master = None
+        # Current state
+        self.__state = DaytimeState()
 
-        # Display of security center
-        self.__text_message = None
+        self.__master = Tk()
 
         # Current time
         self.__text_time = None
 
-        # Current state
-        self.__state = DaytimeState()
+        # Display of security center
+        self.__text_message = None
 
         # ˅
-        self.__master = Tk()
         self.__master.title('State Example')
 
         time_frame = Frame(self.__master)
@@ -50,16 +49,16 @@ class AppSafe(Context):
         button_frame = Frame(self.__master)
         button_frame.pack()
 
-        button_use = Button(button_frame, text = 'Use a safe')
-        button_use.bind("<Button-1>", self.__use_safe)           # Safe use button pressed
+        button_use = Button(button_frame, text = 'Use')
+        button_use.bind("<Button-1>", self.__use_safe)           # Use button pressed
         button_use.grid(row = 0, column = 0)
 
-        button_alarm = Button(button_frame, text = 'Sound an emergency bell')
-        button_alarm.bind("<Button-1>", self.__sound_bell)       # Emergency bell button pressed
+        button_alarm = Button(button_frame, text = 'Alarm')
+        button_alarm.bind("<Button-1>", self.__sound_bell)       # Alarm button pressed
         button_alarm.grid(row = 0, column = 1)
 
-        button_phone = Button(button_frame, text = 'Make a call')
-        button_phone.bind("<Button-1>", self.__call)             # Normal call button pressed
+        button_phone = Button(button_frame, text = 'Phone')
+        button_phone.bind("<Button-1>", self.__call)             # Phone button pressed
         button_phone.grid(row = 0, column = 2)
 
         button_exit = Button(button_frame, text = 'Exit')

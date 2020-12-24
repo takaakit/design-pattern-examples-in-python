@@ -14,10 +14,10 @@ class ColleagueTextField(Colleague):
 
     def __init__(self, text_field):
 
-        self.__text_field = text_field
-
         # Flag indicating whether the text is empty
         self.__is_empty = True
+
+        self.__text_field = text_field
 
         # ˅
         super().__init__()

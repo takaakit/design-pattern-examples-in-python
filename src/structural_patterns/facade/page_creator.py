@@ -10,7 +10,7 @@ from structural_patterns.facade.html_writer import HtmlWriter
 
 class PageCreator(object):
     # ˅
-
+    
     # ˄
 
     def create_simple_homepage(self, mail_address, html_file_name):
@@ -28,7 +28,7 @@ class PageCreator(object):
         # ˄
 
     # ˅
-
+    
     # ˄
 
 

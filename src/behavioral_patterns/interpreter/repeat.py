@@ -34,7 +34,7 @@ class Repeat(Node):
 
     def to_string(self):
         # ˅
-        return '[repeat ' + str(self.__number) + ' ' + self.__command_list.to_string() + ']'
+        return 'repeat ' + str(self.__number) + ' ' + self.__command_list.to_string()
         # ˄
 
     # ˅

@@ -17,8 +17,6 @@ class AppLogin(Mediator):
 
     def __init__(self):
 
-        self.__master = None
-
         self.val = None
 
         self.__radio_login = None
@@ -33,13 +31,15 @@ class AppLogin(Mediator):
 
         self.__button_cancel = None
 
-        # ˅
         self.__master = Tk()
+
+        # ˅
         self.__master.title('Mediator Example')
 
         self.create_colleagues()
-        self.colleague_changed()
         self.set_mediators()
+
+        self.colleague_changed()
 
         self.__master.mainloop()
         # ˄

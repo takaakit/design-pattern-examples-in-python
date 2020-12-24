@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-from creational_patterns.builder.directory import Directory
+from creational_patterns.builder.director import Director
 from creational_patterns.builder.plain_text_builder import PlainTextBuilder
 from creational_patterns.builder.html_builder import HTMLBuilder
 
@@ -15,13 +15,13 @@ if __name__ == '__main__':
 
     if input_value == 'plain':
         plain_text_builder = PlainTextBuilder()
-        directory = Directory(plain_text_builder)
+        directory = Director(plain_text_builder)
         directory.build()
         content = plain_text_builder.result
         print(content)
     elif input_value == 'html':
         html_builder = HTMLBuilder()
-        directory = Directory(html_builder)
+        directory = Director(html_builder)
         directory.build()
         file_name = html_builder.result
         print(file_name + ' has been created.')

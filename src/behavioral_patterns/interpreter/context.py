@@ -11,15 +11,15 @@ class Context(object):
 
     # ˄
 
-    def __init__(self, text):
+    def __init__(self, line):
 
-        self.__iter = iter(text.split())
+        self.__iter = iter(line.split())
 
         self.__current_iter = self.__iter
 
         self.__iter_number = 0
 
-        self.__text_size = len(text.split())
+        self.__text_size = len(line.split())
 
         # ˅
         self.next_token()

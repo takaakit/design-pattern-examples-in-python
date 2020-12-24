@@ -16,16 +16,16 @@ class AppMain(object):
 
     def __init__(self):
 
+        # Painting history
+        self.__history = HistoryCommand()
+
+        self.__canvas = None
+
         self.__frame = Frame(Tk())
 
         self.__clear_button = None
 
         self.__undo_button = None
-
-        # Painting history
-        self.__history = HistoryCommand()
-
-        self.__canvas = None
 
         # ˅
         self.__frame.pack()

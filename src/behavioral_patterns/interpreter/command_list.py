@@ -36,7 +36,7 @@ class CommandList(Node):
 
     def to_string(self):
         # ˅
-        return ', '.join(self.__nodes)
+        return '[' + ', '.join(self.__nodes) + ']'
         # ˄
 
     # ˅
