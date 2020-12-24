@@ -19,19 +19,19 @@ Examples before and after syntax analysis.
 Ex.1
 ```
 Before : "program end"
-After  : [program ]
+After  : [program []]
 ```
 
 Ex.2
 ```
 Before : "program forward right left end"
-After  : [program forward, right, left]
+After  : [program [forward, right, left]]
 ```
 
 Ex.3
 ```
 Before : "program repeat 4 forward right end end"
-After  : [program [repeat 4 forward, right]]
+After  : [program [repeat 4 [forward, right]]]
 ```
 '''
 
