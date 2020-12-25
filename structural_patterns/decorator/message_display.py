@@ -17,7 +17,7 @@ class MessageDisplay(Display):
         self.__message = message
 
         # ˅
-        pass
+        super().__init__()
         # ˄
 
     # Number of characters
