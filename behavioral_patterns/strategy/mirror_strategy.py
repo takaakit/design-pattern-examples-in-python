@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-import random
-from behavioral_patterns.strategy.hand_signal import ROCK
-from behavioral_patterns.strategy.hand_signal import get_hand
+from behavioral_patterns.strategy.hand_signal import get_hand, HandSignal
 from behavioral_patterns.strategy.strategy import Strategy
 
 # ˄
@@ -17,7 +15,7 @@ class MirrorStrategy(Strategy):
 
     def __init__(self):
 
-        self.__pre_opponents_hand = get_hand(ROCK)
+        self.__pre_opponents_hand = get_hand(HandSignal.ROCK)
 
         # ˅
         pass

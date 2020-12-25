@@ -10,6 +10,15 @@ class HandSignal(object):
     
     # ˄
 
+    ROCK = 0
+
+    SCISSORS = 1
+
+    PAPER = 2
+
+    # Characters of the hands
+    name = ['Rock', 'Scissors', 'Paper']
+
     def __init__(self, value):
 
         # Values of rock, scissors and paper.
@@ -33,7 +42,7 @@ class HandSignal(object):
 
     def to_string(self):
         # ˅
-        return name[self.value]
+        return self.name[self.value]
         # ˄
 
     # The draw is 0. "this" win is 1. "hand" win is -1.
@@ -54,16 +63,8 @@ class HandSignal(object):
 
 # ˅
 
-# Hands of rock-scissors-paper
-ROCK = 0        # Rock
-SCISSORS = 1    # Scissors
-PAPER = 2       # Paper
-
 # Characters of the hands
-hands = [HandSignal(ROCK), HandSignal(SCISSORS), HandSignal(PAPER)]
-
-# Characters of the hands
-name = ['Rock', 'Scissors', 'Paper']
+hands = [HandSignal(HandSignal.ROCK), HandSignal(HandSignal.SCISSORS), HandSignal(HandSignal.PAPER)]
 
 # Get an instance of the hand
 def get_hand(hand_value):
