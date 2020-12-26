@@ -14,7 +14,7 @@ class HTMLBuilder(Builder):
     def __init__(self):
 
         # File name to create
-        self.result = None
+        self.__file_name = None
 
         self.__writer = None
 
@@ -25,8 +25,8 @@ class HTMLBuilder(Builder):
     # Make a title of HTML file
     def create_title(self, title):
         # ˅
-        self.result = title + '.html'       # Set a title as a file name
-        self.__writer = open(self.result, 'w')
+        self.__file_name = title + '.html'       # Set a title as a file name
+        self.__writer = open(self.__file_name, 'w')
         self.__writer.write('<html><head><title>' + title + '</title></head><body>')
         self.__writer.write('<h1>' + title + '</h1>')
         # ˄
@@ -50,6 +50,11 @@ class HTMLBuilder(Builder):
         # ˅
         self.__writer.write('</body></html>')
         self.__writer.close()               # Close file
+        # ˄
+
+    def get_file_name(self):
+        # ˅
+        return self.__file_name
         # ˄
 
     # ˅

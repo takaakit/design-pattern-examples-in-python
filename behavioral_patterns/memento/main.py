@@ -21,13 +21,13 @@ if __name__ == '__main__':
         gamer.play()                        # Play a game
 
         # Determine the behavior of the Memento
-        if gamer.money > memento.money:
+        if gamer.get_money() > memento.get_money():
             print('(Gamers\' money is the highest ever, so record the current state.)')
             memento = gamer.create_memento()
-        elif gamer.money < memento.money / 2:
+        elif gamer.get_money() < memento.get_money() / 2:
             print('(Gamer\'s money is less than half of the highest amount, so return to the recorded state.)')
             gamer.restore_memento(memento)
-            print('Gamer\'s money returns to ' + str(gamer.money) + '.')
+            print('Gamer\'s money returns to ' + str(gamer.get_money()) + '.')
 
         sleep(1)
 

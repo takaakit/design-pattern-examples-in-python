@@ -61,17 +61,17 @@ class AppMain(object):
         painting_command.execute()
         # ˄
 
-    def clear(self, event):
-        # ˅
-        self.__canvas.clear()
-        self.__history.clear()
-        # ˄
-
     def undo(self, event):
         # ˅
         self.__canvas.clear()
         self.__history.undo()
         self.__history.execute()
+        # ˄
+
+    def clear(self, event):
+        # ˅
+        self.__canvas.clear()
+        self.__history.clear()
         # ˄
 
     # ˅

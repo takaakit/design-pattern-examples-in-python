@@ -8,7 +8,10 @@ Print on a named printer. Setting and changing the printer name is done by Proxy
 
 if __name__ == '__main__':
     p = PrinterProxy('PRINTER-A')
-    print('The current printer is ' + p.get_printer_name() + '.')
+    print('The printer name is ' + p.get_printer_name() + '.')
     p.set_printer_name('PRINTER-B')
-    print('The current printer is ' + p.get_printer_name() + '.')
+    print('The printer name is ' + p.get_printer_name() + '.')
+
+    print('Print start.')
     p.output('Nice to meet you.')
+    print('Print exit.')

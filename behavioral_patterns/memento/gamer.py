@@ -17,7 +17,7 @@ class Gamer(object):
     def __init__(self, money):
 
         # Gamer's money
-        self.money = money
+        self.__money = money
 
         # ˅
         pass
@@ -26,14 +26,14 @@ class Gamer(object):
     # Get current status
     def create_memento(self):
         # ˅
-        memento = Memento(self.money)
+        memento = Memento(self.__money)
         return memento
         # ˄
 
     # Undo status
     def restore_memento(self, memento):
         # ˅
-        self.money = memento.money
+        self.__money = memento.get_money()
         # ˄
 
     # Play a game
@@ -41,15 +41,15 @@ class Gamer(object):
         # ˅
         dice = random.randrange(1, 6, 1)    # Shake a dice
 
-        pre_money = self.money
+        pre_money = self.__money
         if dice == 1 or dice == 3 or dice == 5:
             # In case of odd...Money is halved
-            self.money = int(self.money / 2)
-            print('Gamer\'s money is halved: ' + str(pre_money) + ' -> ' + str(self.money))
+            self.__money = int(self.__money / 2)
+            print('Gamer\'s money is halved: ' + str(pre_money) + ' -> ' + str(self.__money))
         elif dice == 2 or dice == 4 or dice == 6:
             # In case of even...Money doubles
-            self.money = int(self.money * 2)
-            print('Gamer\'s money doubles: ' + str(pre_money) + ' -> ' + str(self.money))
+            self.__money = int(self.__money * 2)
+            print('Gamer\'s money doubles: ' + str(pre_money) + ' -> ' + str(self.__money))
         else:
             # Other...Exit
             print('Unexpected value.')
@@ -58,7 +58,12 @@ class Gamer(object):
 
     def to_string(self):
         # ˅
-        return '[money = ' + str(self.money) + ']'
+        return '[money = ' + str(self.__money) + ']'
+        # ˄
+
+    def get_money(self):
+        # ˅
+        return self.__money
         # ˄
 
     # ˅

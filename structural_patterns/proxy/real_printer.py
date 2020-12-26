@@ -14,10 +14,15 @@ class RealPrinter(Printer):
 
     def __init__(self, name):
 
-        self.printer_name = name
+        self.__printer_name = name
 
         # ˅
-        self.__heavy_task('Creating an instance(' + self.printer_name + ') of the Printer')
+        self.__heavy_task('Creating an instance(' + self.__printer_name + ') of the Printer')
+        # ˄
+
+    def set_printer_name(self, value):
+        # ˅
+        self.__printer_name = value
         # ˄
 
     # Display a content with the name
@@ -25,7 +30,7 @@ class RealPrinter(Printer):
         # ˅
         print('==========')
         print(content)
-        print('Printed by ' + self.printer_name)
+        print('Printed by ' + self.__printer_name)
         print('==========')
         # ˄
 

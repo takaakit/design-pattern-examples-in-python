@@ -17,7 +17,7 @@ class LazySupporter(Supporter):
         # ˄
 
     # No troubles are handled.
-    def handle(self, trouble):
+    def can_handle(self, trouble):
         # ˅
         return False
         # ˄

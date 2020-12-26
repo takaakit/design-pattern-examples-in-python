@@ -28,19 +28,6 @@ class Directory(FileSystemElement):
         visitor.visit_directory(self)
         # ˄
 
-    # Add an entry
-    def add(self, element):
-        # ˅
-        self.__elements.append(element)
-        return self
-        # ˄
-
-    # Create a iterator
-    def __iter__(self):
-        # ˅
-        return iter(self.__elements)
-        # ˄
-
     # Directory name
     def get_name(self):
         # ˅
@@ -54,6 +41,19 @@ class Directory(FileSystemElement):
         for element in self.__elements:
             size += element.get_size()
         return size
+        # ˄
+
+    # Add an entry
+    def add(self, element):
+        # ˅
+        self.__elements.append(element)
+        return self
+        # ˄
+
+    # Create a iterator
+    def __iter__(self):
+        # ˅
+        return iter(self.__elements)
         # ˄
 
     # ˅

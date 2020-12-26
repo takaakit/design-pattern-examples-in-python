@@ -17,7 +17,7 @@ class MoodySupporter(Supporter):
         # ˄
 
     # Troubles with an odd ID are handled.
-    def handle(self, trouble):
+    def can_handle(self, trouble):
         # ˅
         return trouble.id % 2 == 1
         # ˄

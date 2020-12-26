@@ -14,7 +14,7 @@ class PlainTextBuilder(Builder):
     def __init__(self):
 
         # String to output
-        self.result = ''
+        self.__content = ''
 
         self.__buffer = []
 
@@ -48,7 +48,12 @@ class PlainTextBuilder(Builder):
     def close(self):
         # ˅
         self.__buffer.append('--------------------------------\n')  # Decoration line
-        self.result = ''.join(self.__buffer)
+        self.__content = ''.join(self.__buffer)
+        # ˄
+
+    def get_content(self):
+        # ˅
+        return self.__content
         # ˄
 
     # ˅

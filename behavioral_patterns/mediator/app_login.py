@@ -44,6 +44,27 @@ class AppLogin(Mediator):
         self.__master.mainloop()
         # ˄
 
+    # Change enable/disable of the Colleagues when notified from the Mediators.
+    def colleague_changed(self):
+        # ˅
+        if self.__button_ok.is_pressed() or self.__button_cancel.is_pressed():
+            self.__master.quit()
+        else:
+            if self.__radio_guest.is_selected():      # Guest mode
+                self.__text_username.set_activation(False)
+                self.__text_password.set_activation(False)
+                self.__button_ok.set_activation(True)
+            else:                                   # Login mode
+                self.__text_username.set_activation(True)
+                self.__text_password.set_activation(True)
+
+                # Judge whether the changed Colleage is enabled or disabled
+                if self.__text_username.is_empty() == False and self.__text_password.is_empty() == False:
+                    self.__button_ok.set_activation(True)
+                else:
+                    self.__button_ok.set_activation(False)
+        # ˄
+
     def create_colleagues(self):
         # ˅
         radio_button_frame = Frame(self.__master)
@@ -95,27 +116,6 @@ class AppLogin(Mediator):
         button_cancel = Button(button_frame, text = 'Cancel')
         button_cancel.grid(row = 0, column = 1)
         self.__button_cancel = ColleagueButton(button_cancel)
-        # ˄
-
-    # Change enable/disable of the Colleagues when notified from the Mediators.
-    def colleague_changed(self):
-        # ˅
-        if self.__button_ok.is_pressed() or self.__button_cancel.is_pressed():
-            self.__master.quit()
-        else:
-            if self.__radio_guest.is_selected():      # Guest mode
-                self.__text_username.set_activation(False)
-                self.__text_password.set_activation(False)
-                self.__button_ok.set_activation(True)
-            else:                                   # Login mode
-                self.__text_username.set_activation(True)
-                self.__text_password.set_activation(True)
-
-                # Judge whether the changed Colleage is enabled or disabled
-                if self.__text_username.is_empty() == False and self.__text_password.is_empty() == False:
-                    self.__button_ok.set_activation(True)
-                else:
-                    self.__button_ok.set_activation(False)
         # ˄
 
     # Set mediators

@@ -20,7 +20,7 @@ class LimitedSupporter(Supporter):
         # ˄
 
     # Troubles with an ID below the limit are handled.
-    def handle(self, trouble):
+    def can_handle(self, trouble):
         # ˅
         return trouble.id <= self.__limit_id
         # ˄

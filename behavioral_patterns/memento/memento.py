@@ -13,10 +13,15 @@ class Memento(object):
     def __init__(self, money):
 
         # Money
-        self.money = money
+        self.__money = money
 
         # ˅
         pass
+        # ˄
+
+    def get_money(self):
+        # ˅
+        return self.__money
         # ˄
 
     # ˅

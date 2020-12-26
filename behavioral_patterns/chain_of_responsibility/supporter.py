@@ -27,7 +27,7 @@ class Supporter(object, metaclass=ABCMeta):
     # Troubles are sent around.
     def support(self, trouble):
         # ˅
-        if self.handle(trouble):
+        if self.can_handle(trouble):
             self.__supported(trouble)
 
         elif self.__next is not None:
@@ -50,7 +50,7 @@ class Supporter(object, metaclass=ABCMeta):
         # ˄
 
     @abstractmethod
-    def handle(self, trouble):
+    def can_handle(self, trouble):
         # ˅
         pass
         # ˄

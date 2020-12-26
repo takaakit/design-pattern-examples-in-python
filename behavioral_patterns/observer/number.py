@@ -14,7 +14,7 @@ class Number(object, metaclass=ABCMeta):
 
     def __init__(self):
 
-        self.value = 0
+        self.__value = 0
 
         self.__observers = []
 

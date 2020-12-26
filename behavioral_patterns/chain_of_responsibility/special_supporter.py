@@ -20,7 +20,7 @@ class SpecialSupporter(Supporter):
         # ˄
 
     # Troubles with the specific ID are handled.
-    def handle(self, trouble):
+    def can_handle(self, trouble):
         # ˅
         return trouble.id == self.__target_id
         # ˄

@@ -14,7 +14,7 @@ class BookShelf(Aggregate):
 
     def __init__(self, max_size):
 
-        self.number_of_books = 0
+        self.__number_of_books = 0
 
         self.__books = [None] * max_size
 
@@ -34,8 +34,13 @@ class BookShelf(Aggregate):
 
     def add(self, book):
         # ˅
-        self.__books[self.number_of_books] = book
-        self.number_of_books += 1
+        self.__books[self.__number_of_books] = book
+        self.__number_of_books += 1
+        # ˄
+
+    def get_number_of_books(self):
+        # ˅
+        return self.__number_of_books
         # ˄
 
     # ˅

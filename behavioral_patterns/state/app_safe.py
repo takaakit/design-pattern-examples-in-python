@@ -105,6 +105,14 @@ class AppSafe(Context):
         self.__text_message.insert('end', 'record ... ' + msg + '\n')
         # ˄
 
+    def count_time(self):
+        # ˅
+        while True:
+            for hour in range(0, 23, 1):
+                self.set_time(hour)      # Set the time
+                sleep(1)
+        # ˄
+
     def __use_safe(self, event):
         # ˅
         self.__state.use_safe(self)
@@ -123,14 +131,6 @@ class AppSafe(Context):
     def __exit(self, event):
         # ˅
         self.__master.quit()
-        # ˄
-
-    def count_time(self):
-        # ˅
-        while True:
-            for hour in range(0, 23, 1):
-                self.set_time(hour)      # Set the time
-                sleep(1)
         # ˄
 
     # ˅
