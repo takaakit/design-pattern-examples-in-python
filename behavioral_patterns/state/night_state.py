@@ -15,7 +15,9 @@ class NightState(State):
     def set_time(self, context, hour):
         # ˅
         if 9 <= hour < 17:
+            # To avoid circular import of DaytimeState and NightState, write this import here, not at the beginning of this file.
             from behavioral_patterns.state.daytime_state import DaytimeState
+
             context.change_state(DaytimeState())
         # ˄
 
