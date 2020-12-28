@@ -13,15 +13,15 @@ class CreditCard(Product):
 
     def __init__(self, owner):
 
-        self.owner = owner
+        self.__owner = owner
 
         # ˅
-        print('Make ' + self.owner + '\'s card.')
+        print('Make ' + self.__owner + '\'s card.')
         # ˄
 
     def use(self):
         # ˅
-        print('User ' + self.owner + '\'s card.')
+        print('Use ' + self.__owner + '\'s card.')
         # ˄
 
     # ˅

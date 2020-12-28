@@ -19,7 +19,8 @@ class Memento(object):
         pass
         # ˄
 
-    def get_money(self):
+    @property
+    def money(self):
         # ˅
         return self.__money
         # ˄

@@ -40,7 +40,7 @@ class HandSignal(object):
         return self.__judge_game(hand) == -1
         # ˄
 
-    def to_string(self):
+    def __str__(self):
         # ˅
         return self.name[self.value]
         # ˄

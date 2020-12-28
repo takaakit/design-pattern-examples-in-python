@@ -33,7 +33,7 @@ class Gamer(object):
     # Undo status
     def restore_memento(self, memento):
         # ˅
-        self.__money = memento.get_money()
+        self.__money = memento.money
         # ˄
 
     # Play a game
@@ -61,7 +61,8 @@ class Gamer(object):
         return '[money = ' + str(self.__money) + ']'
         # ˄
 
-    def get_money(self):
+    @property
+    def money(self):
         # ˅
         return self.__money
         # ˄

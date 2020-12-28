@@ -13,15 +13,10 @@ class Colleague(object, metaclass=ABCMeta):
 
     def __init__(self):
 
-        self.mediator = None
+        self.__mediator = None
 
         # ˅
         pass
-        # ˄
-
-    def set_mediator(self, mediator):
-        # ˅
-        self.mediator = mediator
         # ˄
 
     # Set enable/disable from the Mediator
@@ -29,6 +24,18 @@ class Colleague(object, metaclass=ABCMeta):
     def set_activation(self, is_enable):
         # ˅
         pass
+        # ˄
+
+    @property
+    def mediator(self):
+        # ˅
+        return self.__mediator
+        # ˄
+
+    @mediator.setter
+    def mediator(self, value):
+        # ˅
+        self.__mediator = value
         # ˄
 
     # ˅

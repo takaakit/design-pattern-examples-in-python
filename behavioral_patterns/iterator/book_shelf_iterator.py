@@ -23,7 +23,7 @@ class BookShelfIterator(Iterator):
 
     def has_next(self):
         # ˅
-        return self.__index < self.__book_shelf.get_number_of_books()
+        return self.__index < self.__book_shelf.number_of_books
         # ˄
 
     def next(self):

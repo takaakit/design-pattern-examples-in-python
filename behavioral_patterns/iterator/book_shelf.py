@@ -38,7 +38,8 @@ class BookShelf(Aggregate):
         self.__number_of_books += 1
         # ˄
 
-    def get_number_of_books(self):
+    @property
+    def number_of_books(self):
         # ˅
         return self.__number_of_books
         # ˄
