@@ -26,7 +26,7 @@ if __name__ == '__main__':
             memento = gamer.create_memento()
         elif gamer.money < memento.money / 2:
             print('(Gamer\'s money is less than half of the highest amount, so return to the recorded state.)')
-            gamer.restore_memento(memento)
+            gamer.set_memento(memento)
             print('Gamer\'s money returns to ' + str(gamer.money) + '.')
 
         sleep(1)

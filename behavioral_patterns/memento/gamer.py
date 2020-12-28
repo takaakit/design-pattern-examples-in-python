@@ -31,7 +31,7 @@ class Gamer(object):
         # ˄
 
     # Undo status
-    def restore_memento(self, memento):
+    def set_memento(self, memento):
         # ˅
         self.__money = memento.money
         # ˄
