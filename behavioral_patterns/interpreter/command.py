@@ -23,11 +23,15 @@ class Command(Node):
         # ˅
         from behavioral_patterns.interpreter.repeat import Repeat
         from behavioral_patterns.interpreter.action import Action
+        _node = None
         if context.get_token() == 'repeat':
-            self.__node = Repeat()
+            _node = Repeat()
+            _node.parse(context)
         else:
-            self.__node = Action()
-        self.__node.parse(context)
+            _node = Action()
+            _node.parse(context)
+
+        self.__node = _node     # Hold the parsed node
         # ˄
 
     def to_string(self):

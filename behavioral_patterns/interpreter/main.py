@@ -39,7 +39,7 @@ if __name__ == '__main__':
     with open('./program.txt') as fh:
         for line in fh:
             line = line.strip()
-            print('Before : \"' + line + '\"')
+            print('Before parsing : ' + line)
             node = Program()
             node.parse(Context(line))
-            print('After  : ' + node.to_string())
+            print('After parsing  : ' + node.to_string())

@@ -24,8 +24,11 @@ class Program(Node):
         # ˅
         from behavioral_patterns.interpreter.command_list import CommandList
         context.slide_token('program')
-        self.__command_list = CommandList()
-        self.__command_list.parse(context)
+
+        _command_list = CommandList()
+        _command_list.parse(context)
+
+        self.__command_list = _command_list     # Hold the parsed command list
         # ˄
 
     def to_string(self):

@@ -22,10 +22,13 @@ class Action(Node):
 
     def parse(self, context):
         # ˅
-        self.__name = context.get_token()
-        context.slide_token(self.__name)
-        if self.__name != 'forward' and self.__name != 'right' and self.__name != 'left':
-            exit(str(self.__name) + ' is unknown')
+        current_token = context.get_token()
+        if current_token != 'forward' and current_token != 'right' and current_token != 'left':
+            exit(str(current_token) + ' is unknown')
+
+        self.__name = current_token     # Hold the current token as this action name
+
+        context.slide_token(current_token)
         # ˄
 
     def to_string(self):
