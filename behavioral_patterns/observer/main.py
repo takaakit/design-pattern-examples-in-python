@@ -10,8 +10,6 @@ Observers observe objects generating a numerical value and display the value. Th
 
 if __name__ == '__main__':
     number = RandomNumber()
-    digit_observer = DigitObserver()
-    number.add_observer(digit_observer)
-    bar_chart_observer = BarChartObserver()
-    number.add_observer(bar_chart_observer)
+    number.add_observer(DigitObserver())
+    number.add_observer(BarChartObserver())
     number.generate()

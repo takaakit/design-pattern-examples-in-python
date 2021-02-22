@@ -17,6 +17,7 @@ class PageCreator(object):
         # ˅
         address_book = DataLibrary().get_properties('./addressbook.txt')
         user_name = address_book.get('address', mail_address)
+        
         writer = HtmlWriter(html_file_name)
         writer.heading(user_name + '\'s homepage')
         writer.paragraph('Welcome to ' + user_name + '\'s homepage.')

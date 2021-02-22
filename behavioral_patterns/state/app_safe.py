@@ -97,12 +97,14 @@ class AppSafe(Context):
     def call_security_guards_room(self, msg):
         # ˅
         self.__text_message.insert('end', 'call! ' + msg + '\n')
+        self.__text_message.yview_moveto(1)     # Scroll to the bottom
         # ˄
 
     # Record security log
     def record_security_log(self, msg):
         # ˅
         self.__text_message.insert('end', 'record ... ' + msg + '\n')
+        self.__text_message.yview_moveto(1)     # Scroll to the bottom
         # ˄
 
     def count_time(self):

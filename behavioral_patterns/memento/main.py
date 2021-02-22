@@ -29,6 +29,7 @@ if __name__ == '__main__':
             gamer.set_memento(memento)
             print('Gamer\'s money returns to ' + str(gamer.money) + '.')
 
+        print('')
+
         sleep(1)
 
-        print('')

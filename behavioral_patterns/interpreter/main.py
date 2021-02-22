@@ -18,20 +18,20 @@ Examples before and after syntax analysis.
 
 Ex.1
 ```
-Before : "program end"
-After  : [program []]
+Before parsing : program end
+After parsing  : [program []]
 ```
 
 Ex.2
 ```
-Before : "program forward right left end"
-After  : [program [forward, right, left]]
+Before parsing : program forward right left end
+After parsing  : [program [forward, right, left]]
 ```
 
 Ex.3
 ```
-Before : "program repeat 4 forward right end end"
-After  : [program [repeat 4 [forward, right]]]
+Before parsing : program repeat 4 forward right end end
+After parsing  : [program [repeat 4 [forward, right]]]
 ```
 '''
 
