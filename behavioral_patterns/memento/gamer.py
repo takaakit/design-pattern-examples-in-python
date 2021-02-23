@@ -23,14 +23,12 @@ class Gamer(object):
         pass
         # ˄
 
-    # Get current status
     def create_memento(self):
         # ˅
         memento = Memento(self.__money)
         return memento
         # ˄
 
-    # Undo status
     def set_memento(self, memento):
         # ˅
         self.__money = memento.money

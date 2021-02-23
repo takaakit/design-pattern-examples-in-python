@@ -43,7 +43,7 @@ class Directory(FileSystemElement):
         return size
         # ˄
 
-    # Add an entry
+    # Add an element
     def add(self, element):
         # ˅
         self.__elements.append(element)

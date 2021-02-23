@@ -29,10 +29,10 @@ class CommandList(Node):
                 context.slide_token('end')
                 break
             else:
-                _command = Command()
-                _command.parse(context)
+                _node = Command()
+                _node.parse(context)
 
-                self.__nodes.append(_command.to_string())   # Hold the parsed node
+                self.__nodes.append(_node.to_string())   # Hold the parsed node
         # ˄
 
     def to_string(self):
