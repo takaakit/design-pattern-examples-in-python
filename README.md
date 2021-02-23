@@ -79,35 +79,6 @@ References
 * Gamma, E. et al. Design Patterns: Elements of Reusable Object-Oriented Software, Addison-Wesley, 1994
 * Hiroshi Yuki. Learning Design Patterns in Java [In Japanese Language], Softbank publishing, 2004
 
-Other programming languages
----------------------------
-
-* [Design Pattern Examples in C++](https://github.com/takaakit/design-pattern-examples-in-cpp)
-* [Design Pattern Examples in C#](https://github.com/takaakit/design-pattern-examples-in-csharp)
-* [Design Pattern Examples in Golang](https://github.com/takaakit/design-pattern-examples-in-golang)
-* [Design Pattern Examples in Java](https://github.com/takaakit/design-pattern-examples-in-java)
-* [Design Pattern Examples in JavaScript](https://github.com/takaakit/design-pattern-examples-in-javascript)
-* [Design Pattern Examples in Kotlin](https://github.com/takaakit/design-pattern-examples-in-kotlin)
-* [Design Pattern Examples in Ruby](https://github.com/takaakit/design-pattern-examples-in-ruby)
-* [Design Pattern Examples in Scala](https://github.com/takaakit/design-pattern-examples-in-scala)
-* [Design Pattern Examples in Swift](https://github.com/takaakit/design-pattern-examples-in-swift)
-* [Design Pattern Examples in TypeScript](https://github.com/takaakit/design-pattern-examples-in-typescript)
-
-Contributing
-------------
-We welcome your contributions. Function addition, bug fix, refactoring, etc.  
-The procedure is as follows.
-
-1. Fork the repository and create your branch from master.
-2. If you've changed model or code, check that the model and code are not separate. The check procedure is as follows.
-    1. Select a project element on the model browser of Astah.  
-    ![](screenshots/SelectModelElements.png "")
-    2. Press the "Generate code" button.  
-    ![](screenshots/PressCodeGenerationButton.png "")
-    3. Check that the generated code is not updated.  
-    ![](screenshots/CheckGeneratedCode.png "")
-3. Issue the pull request!
-
 Licence
 -------
 This project is licensed under the Creative Commons Zero (CC0) license. The model and code are completely free to be used.
