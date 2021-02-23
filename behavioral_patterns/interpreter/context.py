@@ -5,7 +5,7 @@
 # ˄
 
 
-# Hold the data which will be interpreted.
+# Hold data which will be interpreted.
 class Context(object):
     # ˅
 

@@ -3,7 +3,7 @@
 from creational_patterns.factory_method.id_card.credit_card_factory import CreditCardFactory
 
 '''
-Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+The subject is a factory to make credit cards. The abstract class("Factory") defines how to create an credit card, but the actual credit card is created by the concrete class("CreditCardFactory").
 '''
 
 if __name__ == '__main__':
