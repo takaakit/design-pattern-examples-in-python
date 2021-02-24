@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # ˅
 from creational_patterns.factory_method.framework.factory import Factory
-from creational_patterns.factory_method.id_card.credit_card import CreditCard
+from creational_patterns.factory_method.credit_card.credit_card import CreditCard
 
 # ˄
 
