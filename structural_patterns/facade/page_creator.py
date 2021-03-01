@@ -13,9 +13,24 @@ class PageCreator(object):
     
     # ˄
 
+    __instance = None
+
+    @classmethod
+    def get_instance(cls):
+        # ˅
+        if cls.__instance is None:
+            cls.__instance = cls()
+        return cls.__instance
+        # ˄
+
+    def __init__(self):
+        # ˅
+        pass
+        # ˄
+
     def create_simple_homepage(self, mail_address, html_file_name):
         # ˅
-        address_book = DataLibrary().get_properties('./addressbook.txt')
+        address_book = DataLibrary().get_instance().get_properties('./addressbook.txt')
         user_name = address_book.get('address', mail_address)
         
         writer = HtmlWriter(html_file_name)

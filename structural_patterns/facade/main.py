@@ -7,4 +7,4 @@ Create a simple homepage through a Facade("PageCreator"). The Facade gets info f
 '''
 
 if __name__ == '__main__':
-    PageCreator().create_simple_homepage('emily@example.com', 'Homepage.html')
+    PageCreator().get_instance().create_simple_homepage('emily@example.com', 'Homepage.html')
