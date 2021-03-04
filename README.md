@@ -32,11 +32,26 @@ class File(FileSystemElement):
     # ˄
 
     def __init__(self, name, size):
+
+        self.__name = name
+
+        self.__size = size
+
         # ˅
-        super().__init__(name, size)
+        super().__init__()
         # ˄
 
-    # Print this element with the "upperPath".
+    def get_name(self):
+        # ˅
+        return self.__name
+        # ˄
+
+    def get_size(self):
+        # ˅
+        return self.__size
+        # ˄
+
+    # Print this element with the "upper_path".
     def print(self, upper_path):
         # ˅
         print(upper_path + '/' + self.to_string())
