@@ -50,7 +50,7 @@ class Directory(FileSystemElement):
         return self
         # ˄
 
-    # Create a iterator
+    # Get the iterator
     def __iter__(self):
         # ˅
         return iter(self.__elements)

@@ -42,7 +42,7 @@ class Directory(FileSystemElement):
             element.print(upper_path + '/' + self.get_name())
         # ˄
 
-    # Add a element
+    # Add an element
     def add(self, element):
         # ˅
         self.__elements.append(element)
