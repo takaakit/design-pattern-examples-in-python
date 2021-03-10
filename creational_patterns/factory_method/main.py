@@ -3,7 +3,9 @@
 from creational_patterns.factory_method.credit_card.credit_card_factory import CreditCardFactory
 
 '''
-The subject is a factory to make credit cards. The abstract class("Factory") defines how to create an credit card, but the actual credit card is created by the concrete class("CreditCardFactory"). "createProduct()" is called a Factory Method, and it is responsible for manufacturing an object.
+The subject is a factory to make credit cards. The Factory defines how to create an credit card,
+but the actual credit card is created by the CreditCardFactory.
+The "createProduct()" is called a Factory Method, and it is responsible for manufacturing an object.
 '''
 
 if __name__ == '__main__':

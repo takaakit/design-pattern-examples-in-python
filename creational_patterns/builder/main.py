@@ -7,7 +7,8 @@ from creational_patterns.builder.plain_text_builder import PlainTextBuilder
 from creational_patterns.builder.html_builder import HTMLBuilder
 
 '''
-Create documents in HTML format and text format. It is possible to create different documents in the same construction process.
+Create documents in HTML format and text format. It is possible to create different documents
+in the same construction process.
 '''
 
 if __name__ == '__main__':

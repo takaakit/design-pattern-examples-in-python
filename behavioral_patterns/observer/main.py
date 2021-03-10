@@ -5,7 +5,8 @@ from behavioral_patterns.observer.digit_observer import DigitObserver
 from behavioral_patterns.observer.bar_chart_observer import BarChartObserver
 
 '''
-Observers observe objects generating a numerical value and display the value. The display formats are digits and bar charts.
+Observers observe objects generating a numerical value and display the value.
+The display formats are digits and bar charts.
 '''
 
 if __name__ == '__main__':

@@ -4,7 +4,8 @@ from structural_patterns.composite.directory import Directory
 from structural_patterns.composite.file import File
 
 '''
-Represents a file system composed of files and directories. "FileSystemElement" makes it possible to treat "File" and "Directory" uniformly.
+Represents a file system composed of files and directories. FileSystemElement makes
+it possible to treat File and Directory uniformly.
 '''
 
 if __name__ == '__main__':
