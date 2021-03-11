@@ -14,9 +14,6 @@ class ColleagueTextField(Colleague):
 
     def __init__(self, text_field):
 
-        # Flag indicating whether the text is empty
-        self.__is_empty = True
-
         self.__text_field = text_field
 
         # ˅
@@ -35,16 +32,11 @@ class ColleagueTextField(Colleague):
 
     def is_empty(self):
         # ˅
-        return self.__is_empty
+        return len(self.__text_field.get()) == 0
         # ˄
 
     def __on_key_released(self, event):
         # ˅
-        if len(self.__text_field.get()) == 0:
-            self.__is_empty = True
-        else:
-            self.__is_empty = False
-
         self.mediator.colleague_changed()
         # ˄
 
