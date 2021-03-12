@@ -19,7 +19,7 @@ class AppSafe(Context):
     def __init__(self):
 
         # Current state
-        self.__state = DaytimeState()
+        self.__state = DaytimeState.get_instance()
 
         self.__master = Tk()
 

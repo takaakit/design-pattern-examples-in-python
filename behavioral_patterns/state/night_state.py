@@ -11,6 +11,21 @@ class NightState(State):
 
     # ˄
 
+    __instance = None
+
+    @classmethod
+    def get_instance(cls):
+        # ˅
+        if cls.__instance is None:
+            cls.__instance = cls()
+        return cls.__instance
+        # ˄
+
+    def __init__(self):
+        # ˅
+        pass
+        # ˄
+
     # Set time
     def set_time(self, context, hour):
         # ˅
@@ -18,7 +33,7 @@ class NightState(State):
             # To avoid circular import of DaytimeState and NightState, write this import here, not at the beginning of this file.
             from behavioral_patterns.state.daytime_state import DaytimeState
 
-            context.change_state(DaytimeState())
+            context.change_state(DaytimeState.get_instance())
         # ˄
 
     # Use a safe
