@@ -7,7 +7,7 @@ from behavioral_patterns.observer.observer import Observer
 # ˄
 
 
-# Display values with a bar chart.
+# Display values as a bar chart.
 class BarChartObserver(Observer):
     # ˅
 

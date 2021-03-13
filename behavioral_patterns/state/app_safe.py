@@ -80,9 +80,11 @@ class AppSafe(Context):
             clock_string += '0' + str(hour) + ':00'
         else:
             clock_string += str(hour) + ':00'
+        
         print(clock_string)
         self.__text_time.delete(0, 'end')
         self.__text_time.insert(0, clock_string)
+        
         self.__state.set_time(self, hour)
         # ˄
 

@@ -7,7 +7,7 @@ from behavioral_patterns.observer.observer import Observer
 # ˄
 
 
-# Display values with digits.
+# Display values as a number.
 class DigitObserver(Observer):
     # ˅
 
