@@ -33,7 +33,7 @@ class Number(object, metaclass=ABCMeta):
         self.__observers.append(observer)
         # ˄
 
-    def delete_observer(self, observer):
+    def remove_observer(self, observer):
         # ˅
         self.__observers.remove(observer)
         # ˄
@@ -42,6 +42,18 @@ class Number(object, metaclass=ABCMeta):
         # ˅
         for observer in self.__observers:
             observer.update(self)
+        # ˄
+
+    @property
+    def value(self):
+        # ˅
+        return self.__value
+        # ˄
+
+    @value.setter
+    def value(self, value):
+        # ˅
+        self.__value = value
         # ˄
 
     # ˅
