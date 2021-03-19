@@ -77,8 +77,8 @@ Installation
   Use **ver.2.1** or higher.
 
 **Development Environment for Python**
+* Install Python with tkinter included. The operation has been confirmed in **Python 3.7.0**.
 * Prepare an arbitrary development environment for Python (e.g. [PyCharm](https://www.jetbrains.com/pycharm/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/)).
-* **Tkinter** package is required. The operation has been confirmed in **Python 3.7.0**.
 
 Usage
 -----
