@@ -12,7 +12,7 @@ class Display(object, metaclass=ABCMeta):
     # ˄
 
     @abstractmethod
-    def create_clone(self):
+    def clone(self):
         # ˅
         pass
         # ˄

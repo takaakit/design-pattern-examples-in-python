@@ -19,7 +19,7 @@ class UnderlineDisplay(Display):
         pass
         # ˄
 
-    def create_clone(self):
+    def clone(self):
         # ˅
         return UnderlineDisplay(self.__underline_char)
         # ˄

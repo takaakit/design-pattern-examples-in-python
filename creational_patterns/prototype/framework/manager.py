@@ -26,7 +26,7 @@ class Manager(object):
     def get_display(self, display_name):
         # ˅
         d = self.__display[display_name]
-        return d.create_clone()
+        return d.clone()
         # ˄
 
     # ˅

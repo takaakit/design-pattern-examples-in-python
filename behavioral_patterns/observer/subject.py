@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-from abc import *
 
 # ˄
 
 
 # An abstract class that generates numbers.
-class Subject(object, metaclass=ABCMeta):
+class Subject(object):
     # ˅
 
     # ˄

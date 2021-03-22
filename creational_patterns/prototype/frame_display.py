@@ -19,7 +19,7 @@ class FrameDisplay(Display):
         pass
         # ˄
 
-    def create_clone(self):
+    def clone(self):
         # ˅
         return FrameDisplay(self.__border_char)
         # ˄
