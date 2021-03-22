@@ -1,16 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from behavioral_patterns.observer.random_number import RandomNumber
+import random
+from time import sleep
+from behavioral_patterns.observer.number_subject import NumberSubject
 from behavioral_patterns.observer.digit_observer import DigitObserver
 from behavioral_patterns.observer.bar_chart_observer import BarChartObserver
 
 '''
-Observers observe objects generating a numerical value and display the value.
+Observers observe a Subject object holding a numerical value and display the value.
 The display formats are digits and bar charts.
 '''
 
 if __name__ == '__main__':
-    number = RandomNumber()
-    number.add_observer(DigitObserver())
-    number.add_observer(BarChartObserver())
-    number.generate()
+    number_subject = NumberSubject()
+    number_subject.attach(DigitObserver(number_subject))
+    number_subject.attach(BarChartObserver(number_subject))
+
+    for i in range(0, 20):
+        number_subject.value = random.randrange(50)
+        sleep(0.2)

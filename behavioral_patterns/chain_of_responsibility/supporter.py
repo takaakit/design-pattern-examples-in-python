@@ -44,11 +44,6 @@ class Supporter(object, metaclass=ABCMeta):
         return self.__next
         # ˄
 
-    def to_string(self):
-        # ˅
-        return '[' + self.__name + ']'
-        # ˄
-
     @abstractmethod
     def can_handle(self, trouble):
         # ˅

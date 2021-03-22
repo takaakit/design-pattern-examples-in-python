@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-from time import sleep
 from behavioral_patterns.observer.observer import Observer
 
 # ˄
@@ -13,10 +12,18 @@ class DigitObserver(Observer):
 
     # ˄
 
-    def update(self, number):
+    def __init__(self, numberSubject):
+
+        self.__numberSubject = numberSubject
+
         # ˅
-        print('Digit    : ' + str(number.value))
-        sleep(0.1)
+        pass
+        # ˄
+
+    def update(self, changedSubject):
+        # ˅
+        if changedSubject is self.__numberSubject:
+            print('Digit    : ' + str(self.__numberSubject.value))
         # ˄
 
     # ˅

@@ -39,7 +39,7 @@ class HistoryCommand(Command):
             self.__past_commands.pop()
         # ˄
 
-    # Delete all past commands.
+    # Delete all past commands
     def clear(self):
         # ˅
         self.__past_commands.clear()

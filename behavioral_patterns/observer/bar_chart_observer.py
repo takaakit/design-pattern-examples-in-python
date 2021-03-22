@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
-from time import sleep
 from behavioral_patterns.observer.observer import Observer
 
 # ˄
@@ -13,13 +12,21 @@ class BarChartObserver(Observer):
 
     # ˄
 
-    def update(self, number):
+    def __init__(self, numberSubject):
+
+        self.__numberSubject = numberSubject
+
         # ˅
-        print('Bar chart: ', end="")
-        for i in range(0, number.value):
-            print('*', end="")
-        print('')
-        sleep(0.1)
+        pass
+        # ˄
+
+    def update(self, changedSubject):
+        # ˅
+        if changedSubject is self.__numberSubject:
+            print('Bar chart: ', end="")
+            for i in range(0, self.__numberSubject.value):
+                print('*', end="")
+            print('')
         # ˄
 
     # ˅

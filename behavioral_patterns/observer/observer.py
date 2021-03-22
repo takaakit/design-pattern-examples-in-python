@@ -12,7 +12,7 @@ class Observer(object, metaclass=ABCMeta):
     # ˄
 
     @abstractmethod
-    def update(self, number):
+    def update(self, changedSubject):
         # ˅
         pass
         # ˄
