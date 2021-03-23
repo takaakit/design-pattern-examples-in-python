@@ -26,7 +26,6 @@ class NightState(State):
         pass
         # ˄
 
-    # Set time
     def set_time(self, context, hour):
         # ˅
         if 9 <= hour < 17:
@@ -36,20 +35,17 @@ class NightState(State):
             context.change_state(DaytimeState.get_instance())
         # ˄
 
-    # Use a safe
-    def use_safe(self, context):
+    def use(self, context):
         # ˅
         context.call_security_guards_room('Emergency: Use a safe at night!')
         # ˄
 
-    # Sound a emergency bell
-    def sound_bell(self, context):
+    def alarm(self, context):
         # ˅
         context.call_security_guards_room('Sound a emergency bell at night')
         # ˄
 
-    # Make a normal call
-    def call(self, context):
+    def phone(self, context):
         # ˅
         context.record_security_log('Record a night call')
         # ˄

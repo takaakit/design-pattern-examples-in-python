@@ -33,16 +33,10 @@ class HtmlWriter(object):
         self.__writer.write('<p>' + message + '</p>\n')
         # ˄
 
-    # Write a link
-    def anchor(self, url, text):
-        # ˅
-        self.paragraph('<a href=\"' + url + '\">' + text + '</a>')
-        # ˄
-
     # Write a mail address
     def mailto(self, mail_address, user_name):
         # ˅
-        self.anchor('mailto:' + mail_address, user_name)
+        self.__anchor('mailto:' + mail_address, user_name)
         # ˄
 
     def close(self):
@@ -50,6 +44,12 @@ class HtmlWriter(object):
         self.__writer.write('</body>')
         self.__writer.write('</html>\n')
         self.__writer.close()
+        # ˄
+
+    # Write a link
+    def __anchor(self, url, text):
+        # ˅
+        self.paragraph('<a href=\"' + url + '\">' + text + '</a>')
         # ˄
 
     # ˅

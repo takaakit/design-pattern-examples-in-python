@@ -7,7 +7,7 @@ from structural_patterns.proxy.real_printer import RealPrinter
 # ˄
 
 
-class PrinterProxy(Printer):
+class ProxyPrinter(Printer):
     # ˅
 
     # ˄
@@ -23,16 +23,16 @@ class PrinterProxy(Printer):
         pass
         # ˄
 
-    def get_printer_name(self):
+    def get_name(self):
         # ˅
         return self.__current_name
         # ˄
 
-    def set_printer_name(self, value):
+    def change_name(self, name):
         # ˅
         if self.__real is not None:
-            self.__real.set_printer_name(value)
-        self.__current_name = value
+            self.__real.set_printer_name(name)
+        self.__current_name = name
         # ˄
 
     def output(self, content):

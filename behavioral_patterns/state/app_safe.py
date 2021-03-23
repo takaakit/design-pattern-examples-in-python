@@ -50,24 +50,20 @@ class AppSafe(Context):
         button_frame.pack()
 
         button_use = Button(button_frame, text = 'Use')
-        button_use.bind("<Button-1>", self.__use_safe)           # Use button pressed
+        button_use.bind("<Button-1>", self.__pressed_use_button)
         button_use.grid(row = 0, column = 0)
 
         button_alarm = Button(button_frame, text = 'Alarm')
-        button_alarm.bind("<Button-1>", self.__sound_bell)       # Alarm button pressed
+        button_alarm.bind("<Button-1>", self.__pressed_alarm_button)
         button_alarm.grid(row = 0, column = 1)
 
         button_phone = Button(button_frame, text = 'Phone')
-        button_phone.bind("<Button-1>", self.__call)             # Phone button pressed
+        button_phone.bind("<Button-1>", self.__pressed_phone_button)
         button_phone.grid(row = 0, column = 2)
 
-        button_exit = Button(button_frame, text = 'Exit')
-        button_exit.bind("<Button-1>", self.__exit)              # Exit button pressed
-        button_exit.grid(row = 0, column = 3)
-
-        count_time_thread = threading.Thread(target = self.count_time)
-        count_time_thread.setDaemon(True)
-        count_time_thread.start()
+        count_up_time_thread = threading.Thread(target = self.__count_up_time)
+        count_up_time_thread.setDaemon(True)
+        count_up_time_thread.start()
 
         self.__master.mainloop()
         # ˄
@@ -109,32 +105,27 @@ class AppSafe(Context):
         self.__text_message.yview_moveto(1)     # Scroll to the bottom
         # ˄
 
-    def count_time(self):
+    def __pressed_use_button(self, event):
+        # ˅
+        self.__state.use(self)
+        # ˄
+
+    def __pressed_alarm_button(self, event):
+        # ˅
+        self.__state.alarm(self)
+        # ˄
+
+    def __pressed_phone_button(self, event):
+        # ˅
+        self.__state.phone(self)
+        # ˄
+
+    def __count_up_time(self):
         # ˅
         while True:
             for hour in range(0, 23, 1):
                 self.set_time(hour)      # Set the time
                 sleep(1)
-        # ˄
-
-    def __use_safe(self, event):
-        # ˅
-        self.__state.use_safe(self)
-        # ˄
-
-    def __sound_bell(self, event):
-        # ˅
-        self.__state.sound_bell(self)
-        # ˄
-
-    def __call(self, event):
-        # ˅
-        self.__state.call(self)
-        # ˄
-
-    def __exit(self, event):
-        # ˅
-        self.__master.quit()
         # ˄
 
     # ˅
