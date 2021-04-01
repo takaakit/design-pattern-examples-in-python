@@ -42,7 +42,7 @@ class DaytimeState(State):
 
     def alarm(self, context):
         # ˅
-        context.call_security_guards_room('Sound a emergency bell in the daytime')
+        context.call_security_guards_room('Sound an emergency bell in the daytime')
         # ˄
 
     def phone(self, context):

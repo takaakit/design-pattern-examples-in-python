@@ -42,7 +42,7 @@ class NightState(State):
 
     def alarm(self, context):
         # ˅
-        context.call_security_guards_room('Sound a emergency bell at night')
+        context.call_security_guards_room('Sound an emergency bell at night')
         # ˄
 
     def phone(self, context):
