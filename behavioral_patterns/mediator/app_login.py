@@ -34,8 +34,6 @@ class AppLogin(Mediator):
         self.__master = Tk()
 
         # ˅
-        self.__master.title('Mediator Example')
-
         self.create_colleagues()
 
         # Set mediators
@@ -74,6 +72,8 @@ class AppLogin(Mediator):
 
     def create_colleagues(self):
         # ˅
+        self.__master.title('Mediator Example')
+
         radio_button_frame = Frame(self.__master)
         radio_button_frame.pack(anchor = W)
 
