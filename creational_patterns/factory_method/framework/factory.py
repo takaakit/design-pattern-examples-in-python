@@ -13,7 +13,13 @@ class Factory(object, metaclass=ABCMeta):
 
     def create(self, owner):
         # ˅
-        return self.create_product(owner)
+        # Write pre-creation code here, if any.
+
+        product = self.create_product(owner)
+
+        # Write post-creation code here, if any.
+
+        return product
         # ˄
 
     @abstractmethod
