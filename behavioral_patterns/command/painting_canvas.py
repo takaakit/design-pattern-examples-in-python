@@ -24,13 +24,13 @@ class PaintingCanvas(PaintingTarget):
         pass
         # ˄
 
-    def paint(self, painting_pos_x, painting_pos_y):
+    def paint(self, x, y):
         # ˅
         self.__canvas.create_oval(
-            painting_pos_x - self.__point_radius,
-            painting_pos_y - self.__point_radius,
-            painting_pos_x + self.__point_radius,
-            painting_pos_y + self.__point_radius,
+            x - self.__point_radius,
+            y - self.__point_radius,
+            x + self.__point_radius,
+            y + self.__point_radius,
             fill = self.__painting_color,
             width = 0)
         # ˄
