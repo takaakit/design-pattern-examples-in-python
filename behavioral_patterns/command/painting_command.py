@@ -20,7 +20,7 @@ class PaintingCommand(Command):
         # Painting position y
         self.__painting_pos_y = painting_pos_y
 
-        self.painting_target = painting_target
+        self.__painting_target = painting_target
 
         # ˅
         pass
@@ -28,7 +28,7 @@ class PaintingCommand(Command):
 
     def execute(self):
         # ˅
-        self.painting_target.paint(self.__painting_pos_x, self.__painting_pos_y)
+        self.__painting_target.paint(self.__painting_pos_x, self.__painting_pos_y)
         # ˄
 
     # ˅
