@@ -6,10 +6,9 @@ Design Pattern Examples in Python
 Model and code examples of GoF Design Patterns for Python.  
 This project is available for the following objectives:  
 
-* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
+* To understand GoF Design Pattern examples in Python.
 * To understand the mapping between UML model and Python code.
-* To understand GoF Design Pattern examples in Python.  
-  etc.
+* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
 
 > UML model example:
 
