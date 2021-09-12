@@ -14,6 +14,7 @@ This project is available for the following objectives:
 
 ![](screenshots/CompositePattern.svg "Composite Pattern")
 
+<a id="code-example"></a>
 > Python code example:
 
 ```python:File class
@@ -68,27 +69,29 @@ class File(FileSystemElement):
 
 Installation
 ------------
-**Astah**
-* Download Astah UML or Professional from [Change Vision site](http://astah.net/download), and install.  
+**UML Modeling Tool**
+* Download the modeling tool [Astah](http://astah.net/download) UML or Professional, and install.  
+* Download [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in **ver.2.1** or higher, and add it to Astah.  
+  [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
-**M PLUS plug-in**
-* Download the plug-in from [M PLUS plug-in site](https://sites.google.com/view/m-plus-plugin/download), and install.  
-  Use **ver.2.1** or higher.
-
-**Development Environment for Python**
+**Python Development Environment**  
 * Install Python with tkinter included. The operation has been confirmed in **Python 3.7.0**.
-* Prepare an arbitrary development environment for Python (e.g. [PyCharm](https://www.jetbrains.com/pycharm/download/), [Eclipse](http://www.eclipse.org/downloads/eclipse-packages/)).
+* Optionally, install an IDE (e.g. [PyCharm](https://www.jetbrains.com/pycharm/download/)).
 
 Usage
 -----
-1. Select model elements on the model browser of Astah.
-2. Click the **Generate code** button.  
-   The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation.
-3. Run the program from **main.py** for each Design Pattern.  
+**Code Generation from UML**
+  1. Open the Astah file (model/DesignPatternExamplesInPython.asta).
+  2. Select model elements on the model browser of Astah.
+  3. Click the **Generate Code** button.  
+  ![](screenshots/GenerateCode.gif "Generate Code")  
+  The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation. [View code example](#code-example).  
+  For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin-tips).
 
-For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin-tips).
-
-![](screenshots/Usage.gif "Usage")
+**Run in PyCharm**
+  1. Open the project root directory (design-pattern-examples-in-python) in PyCharm.
+  2. Open `main.py` for the pattern you want to run, and click `Run` icon in the left gutter.
+     ![](screenshots/Run.gif "Run")  
 
 References
 ----------
