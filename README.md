@@ -88,7 +88,7 @@ Usage
   The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation. [View code example](#code-example).  
   For detailed usage of the tools, please see [Astah Manual](http://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin-tips).
 
-**Run in PyCharm**
+**Run (if you use PyCharm)**
   1. Open the project root directory (design-pattern-examples-in-python) in PyCharm.
   2. Open `main.py` for the pattern you want to run, and click `Run` icon in the left gutter.
      ![](screenshots/Run.gif "Run")  
