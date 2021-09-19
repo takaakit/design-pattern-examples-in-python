@@ -17,7 +17,7 @@ This project is available for the following objectives:
 <a id="code-example"></a>
 > Python code example:
 
-```python:File class
+```python
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
