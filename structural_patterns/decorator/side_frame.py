@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
+import sys
 from structural_patterns.decorator.frame import Frame
 
 # ˄
@@ -18,6 +19,10 @@ class SideFrame(Frame):
 
         # ˅
         super().__init__(display)
+
+        if len(self.__frame_char) != 1:
+            print('Only one character is allowed in a side frame.')
+            sys.exit(1)
         # ˄
 
     # Number of characters added left and right decoration characters
