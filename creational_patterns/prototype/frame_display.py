@@ -28,11 +28,11 @@ class FrameDisplay(Display):
         # ˅
         length = len(message)
         for i in range(length + 4):
-            print(self.__border_char, end = '')
+            print(self.__border_char, end='')
         print('')
         print(self.__border_char + ' ' + message + ' ' + self.__border_char)
         for i in range(length + 4):
-            print(self.__border_char, end = '')
+            print(self.__border_char, end='')
         print('')
         # ˄
 

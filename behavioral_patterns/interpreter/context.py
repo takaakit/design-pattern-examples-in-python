@@ -43,16 +43,16 @@ class Context(object):
     def slide_token(self, token):
         # ˅
         if token != self.__current_iter:
-            exit('WARNING: ' + token + ' is expected but ' + self.__current_iter + ' was found.')
+            exit('WARNING: ' + token + ' is expected but ' + str(self.__current_iter) + ' was found.')
         self.next_token()
         # ˄
 
     def get_number(self):
         # ˅
-        if self.get_token().isdigit():
+        if str(self.get_token()).isdigit():
             return self.get_token()
         else:
-            exit('WARNING: ' + self.get_token())
+            exit('WARNING: ' + str(self.get_token()))
         # ˄
 
     # ˅

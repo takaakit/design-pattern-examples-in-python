@@ -42,10 +42,10 @@ class RealPrinter(Printer):
     # Heavy task (Please think so...)
     def __heavy_task(self, message):
         # ˅
-        print(message, end = '')
+        print(message, end='')
         for i in range(10):
             sleep(0.5)
-            print('.', end = '')
+            print('.', end='')
         print('Done.')
         # ˄
 

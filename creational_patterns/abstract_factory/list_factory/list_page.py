@@ -18,7 +18,7 @@ class ListPage(Page):
 
     def to_html(self):
         # ˅
-        buffer = []
+        buffer = list()
         buffer.append('<html><head><title>' + self.title + '</title></head>\n')
         buffer.append('<body><h1>' + self.title + '</h1>\n')
         buffer.append('<ul>\n')

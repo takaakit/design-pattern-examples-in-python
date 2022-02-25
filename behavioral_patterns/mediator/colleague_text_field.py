@@ -25,9 +25,9 @@ class ColleagueTextField(Colleague):
     def set_activation(self, is_enable):
         # ˅
         if is_enable:
-            self.__text_field.configure(state = NORMAL)
+            self.__text_field.configure(state=NORMAL)
         else:
-            self.__text_field.configure(state = DISABLED)
+            self.__text_field.configure(state=DISABLED)
         # ˄
 
     def is_empty(self):

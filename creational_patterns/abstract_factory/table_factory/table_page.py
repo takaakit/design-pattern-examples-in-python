@@ -18,7 +18,7 @@ class TablePage(Page):
 
     def to_html(self):
         # ˅
-        buffer = []
+        buffer = list()
         buffer.append('<html><head><title>' + self.title + '</title></head><body>\n')
         buffer.append('<h1>' + self.title + '</h1>\n')
         buffer.append('<table width="80%" border="3">\n')

@@ -37,8 +37,8 @@ class AppMain(object):
         # ˅
         self.__frame.master.title('Command Example')
 
-        tk_canvas = Canvas(self.__frame.master, bg = 'white', width = 400.0, height = 300.0)
-        tk_canvas.pack(side = BOTTOM)
+        tk_canvas = Canvas(self.__frame.master, bg='white', width=400.0, height=300.0)
+        tk_canvas.pack(side=BOTTOM)
         tk_canvas.bind('<B1-Motion>', self.on_dragged)
 
         self.__canvas = PaintingCanvas(tk_canvas)
@@ -46,12 +46,12 @@ class AppMain(object):
         self.__undo_button = Button(self.__frame)
         self.__undo_button['text'] = 'Undo'
         self.__undo_button.bind('<Button-1>', self.undo)
-        self.__undo_button.pack(side = LEFT)
+        self.__undo_button.pack(side=LEFT)
 
         self.__clear_button = Button(self.__frame)
         self.__clear_button['text'] = 'Clear'
         self.__clear_button.bind('<Button-1>', self.clear)
-        self.__clear_button.pack(side = LEFT)
+        self.__clear_button.pack(side=LEFT)
         # ˄
 
     def on_dragged(self, event):

@@ -30,7 +30,7 @@ class TextDisplayImpl(DisplayImpl):
 
     def impl_write(self):
         # ˅
-        print(':' + self.__text + ':')    # Enclose a text with ":" and display it.
+        print(':' + self.__text + ':')  # Enclose a text with ":" and display it.
         # ˄
 
     def impl_close(self):
@@ -40,10 +40,10 @@ class TextDisplayImpl(DisplayImpl):
 
     def __print_line(self):
         # ˅
-        print('*', end = '')              # Display "*" mark at the beginning of a frame.
-        for i in range(self.__width):     # Display "." for the number of "width".
-            print('.', end = '')
-        print('*')                        # Display "*" mark at the end of a frame.
+        print('*', end='')              # Display "*" mark at the beginning of a frame.
+        for i in range(self.__width):   # Display "." for the number of "width".
+            print('.', end='')
+        print('*')                      # Display "*" mark at the end of a frame.
         # ˄
 
     # ˅

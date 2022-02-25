@@ -33,35 +33,35 @@ class AppSafe(Context):
         self.__master.title('State Example')
 
         time_frame = Frame(self.__master)
-        time_frame.pack(anchor = W)
+        time_frame.pack(anchor=W)
 
-        text_time = Entry(time_frame, width = 20)
-        text_time.grid(sticky = W)
+        text_time = Entry(time_frame, width=20)
+        text_time.grid(sticky=W)
         self.__text_time = text_time
 
         message_frame = Frame(self.__master)
         message_frame.pack()
 
-        text_message = ScrolledText(message_frame, height = 8, wrap = None)
-        text_message.grid(sticky = N + E + W + S)
+        text_message = ScrolledText(message_frame, height=8, wrap=None)
+        text_message.grid(sticky=N + E + W + S)
         self.__text_message = text_message
 
         button_frame = Frame(self.__master)
         button_frame.pack()
 
-        button_use = Button(button_frame, text = 'Use')
+        button_use = Button(button_frame, text='Use')
         button_use.bind("<Button-1>", self.__pressed_use_button)
-        button_use.grid(row = 0, column = 0)
+        button_use.grid(row=0, column=0)
 
-        button_alarm = Button(button_frame, text = 'Alarm')
+        button_alarm = Button(button_frame, text='Alarm')
         button_alarm.bind("<Button-1>", self.__pressed_alarm_button)
-        button_alarm.grid(row = 0, column = 1)
+        button_alarm.grid(row=0, column=1)
 
-        button_phone = Button(button_frame, text = 'Phone')
+        button_phone = Button(button_frame, text='Phone')
         button_phone.bind("<Button-1>", self.__pressed_phone_button)
-        button_phone.grid(row = 0, column = 2)
+        button_phone.grid(row=0, column=2)
 
-        count_up_time_thread = threading.Thread(target = self.__count_up_time)
+        count_up_time_thread = threading.Thread(target=self.__count_up_time)
         count_up_time_thread.setDaemon(True)
         count_up_time_thread.start()
 

@@ -18,7 +18,7 @@ class ListData(Data):
 
     def to_html(self):
         # ˅
-        buffer = []
+        buffer = list()
         buffer.append('<li>' + self.name + '<ul>\n')
         for item in self.items:
             buffer.append(item.to_html())

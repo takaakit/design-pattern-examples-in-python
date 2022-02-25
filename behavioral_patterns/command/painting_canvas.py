@@ -31,8 +31,8 @@ class PaintingCanvas(PaintingTarget):
             y - self.__point_radius,
             x + self.__point_radius,
             y + self.__point_radius,
-            fill = self.__painting_color,
-            width = 0)
+            fill=self.__painting_color,
+            width=0)
         # ˄
 
     def clear(self):

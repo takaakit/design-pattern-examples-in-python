@@ -66,6 +66,7 @@ class HandSignal(object):
 # Characters of the hands
 hands = [HandSignal(HandSignal.ROCK), HandSignal(HandSignal.SCISSORS), HandSignal(HandSignal.PAPER)]
 
+
 # Get an instance of the hand
 def get_hand(hand_value):
     return hands[hand_value]

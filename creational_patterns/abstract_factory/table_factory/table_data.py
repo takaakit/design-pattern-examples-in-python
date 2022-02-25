@@ -18,7 +18,7 @@ class TableData(Data):
 
     def to_html(self):
         # ˅
-        buffer = []
+        buffer = list()
         buffer.append('<td><table width="100%" border="2">\n')
         buffer.append('<tr><td bgcolor="#00CC00" align="center" colspan="' + str(len(self.items)) + '"><b>' + self.name + '</b></td></tr>\n')
         buffer.append('<tr>\n')

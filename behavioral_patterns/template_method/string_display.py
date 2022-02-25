@@ -24,25 +24,25 @@ class StringDisplay(AbstractDisplay):
 
     def open(self):
         # ˅
-        self.__write_line()      # Write a line
+        self.__write_line()  # Write a line
         # ˄
 
     def write(self):
         # ˅
-        print('|' + self.__string + '|')    # Display the character with "|"
+        print('|' + self.__string + '|')  # Display the character with "|"
         # ˄
 
     def close(self):
         # ˅
-        self.__write_line()      # Write a line
+        self.__write_line()  # Write a line
         # ˄
 
     def __write_line(self):
         # ˅
-        print('+', end = '')              # Display an end mark "+"
+        print('+', end='')             # Display an end mark "+"
         for i in range(self.__width):
-            print('-', end = '')          # Display a line "-"
-        print('+')                        # Display an end mark "+"
+            print('-', end='')         # Display a line "-"
+        print('+')                     # Display an end mark "+"
         # ˄
 
     # ˅

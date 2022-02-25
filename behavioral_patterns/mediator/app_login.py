@@ -55,7 +55,7 @@ class AppLogin(Mediator):
         if self.__button_ok.is_pressed() or self.__button_cancel.is_pressed():
             self.__master.quit()
         else:
-            if self.__radio_guest.is_selected():      # Guest mode
+            if self.__radio_guest.is_selected():    # Guest mode
                 self.__text_username.set_activation(False)
                 self.__text_password.set_activation(False)
                 self.__button_ok.set_activation(True)
@@ -64,7 +64,7 @@ class AppLogin(Mediator):
                 self.__text_password.set_activation(True)
 
                 # Judge whether the changed Colleage is enabled or disabled
-                if self.__text_username.is_empty() == False and self.__text_password.is_empty() == False:
+                if self.__text_username.is_empty() is False and self.__text_password.is_empty() is False:
                     self.__button_ok.set_activation(True)
                 else:
                     self.__button_ok.set_activation(False)
@@ -75,53 +75,53 @@ class AppLogin(Mediator):
         self.__master.title('Mediator Example')
 
         radio_button_frame = Frame(self.__master)
-        radio_button_frame.pack(anchor = W)
+        radio_button_frame.pack(anchor=W)
 
         self.val = IntVar()
         self.val.set(0)
 
         radio_button_guest = Radiobutton(
             radio_button_frame,
-            text = 'Guest',
-            variable = self.val,
-            value = 0)
-        radio_button_guest.grid(row = 0, column = 0)
+            text='Guest',
+            variable=self.val,
+            value=0)
+        radio_button_guest.grid(row=0, column=0)
         self.__radio_guest = ColleagueRadioButton(radio_button_guest)
 
         radio_button_login = Radiobutton(
             radio_button_frame,
-            text = 'Login',
-            variable = self.val,
-            value = 1)
-        radio_button_login.grid(row = 0, column = 1)
+            text='Login',
+            variable=self.val,
+            value=1)
+        radio_button_login.grid(row=0, column=1)
         self.__radio_login = ColleagueRadioButton(radio_button_login)
 
         text_field_frame = Frame(self.__master)
         text_field_frame.pack()
 
-        label_username = Label(text_field_frame, text = 'Username:')
-        label_username.grid(row = 0, column = 0)
+        label_username = Label(text_field_frame, text='Username:')
+        label_username.grid(row=0, column=0)
 
-        label_password = Label(text_field_frame, text = 'Password:')
-        label_password.grid(row = 1, column = 0)
+        label_password = Label(text_field_frame, text='Password:')
+        label_password.grid(row=1, column=0)
 
-        text_username = Entry(text_field_frame, width = 20)
-        text_username.grid(row = 0, column = 1)
+        text_username = Entry(text_field_frame, width=20)
+        text_username.grid(row=0, column=1)
         self.__text_username = ColleagueTextField(text_username)
 
-        text_password = Entry(text_field_frame, width = 20, show = '*')
-        text_password.grid(row = 1, column = 1)
+        text_password = Entry(text_field_frame, width=20, show='*')
+        text_password.grid(row=1, column=1)
         self.__text_password = ColleagueTextField(text_password)
 
         button_frame = Frame(self.__master)
-        button_frame.pack(anchor = E)
+        button_frame.pack(anchor=E)
 
-        button_ok = Button(button_frame, text = 'OK')
-        button_ok.grid(row = 0, column = 0)
+        button_ok = Button(button_frame, text='OK')
+        button_ok.grid(row=0, column=0)
         self.__button_ok = ColleagueButton(button_ok)
 
-        button_cancel = Button(button_frame, text = 'Cancel')
-        button_cancel.grid(row = 0, column = 1)
+        button_cancel = Button(button_frame, text='Cancel')
+        button_cancel.grid(row=0, column=1)
         self.__button_cancel = ColleagueButton(button_cancel)
         # ˄
 

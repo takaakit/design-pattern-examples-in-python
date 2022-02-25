@@ -21,17 +21,17 @@ class CharDisplay(AbstractDisplay):
 
     def open(self):
         # ˅
-        print('<<', end = '')     # Display "<<" in the start characters.
+        print('<<', end='')         # Display "<<" in the start characters.
         # ˄
 
     def write(self):
         # ˅
-        print(self.__char, end = '')  # Display the character.
+        print(self.__char, end='')  # Display the character.
         # ˄
 
     def close(self):
         # ˅
-        print('>>')             # Display ">>" in the end characters.
+        print('>>')                 # Display ">>" in the end characters.
         # ˄
 
     # ˅
