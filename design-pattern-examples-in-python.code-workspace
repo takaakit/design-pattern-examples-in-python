@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.analysis.extraPaths": ["${workspaceFolder}"],
+		"code-runner.showRunCommandInEditorContextMenu": false,
+		"code-runner.showRunCommandInExplorerContextMenu": false,
+		"code-runner.showRunIconInEditorTitleMenu": false
+	}
+}
