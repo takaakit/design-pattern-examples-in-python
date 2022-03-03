@@ -13,8 +13,6 @@ class LargeSizeChar(object):
 
     def __init__(self, char_name):
 
-        self.__char_name = char_name
-
         # Display data of the large size character
         self.__display_data = ''
 
