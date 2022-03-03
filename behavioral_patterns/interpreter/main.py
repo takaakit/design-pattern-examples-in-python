@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import os
 from behavioral_patterns.interpreter.program import Program
 from behavioral_patterns.interpreter.context import Context
 
@@ -37,7 +38,7 @@ After parsing  : [program [repeat 4 [forward, right]]]
 '''
 
 if __name__ == '__main__':
-    with open('./program.txt') as fh:
+    with open(os.path.join(os.path.dirname(__file__), 'program.txt')) as fh:
         for line in fh:
             line = line.strip()
             print('Before parsing : ' + line)

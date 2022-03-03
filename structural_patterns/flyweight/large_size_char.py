@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
+import os
 
 # ˄
 
@@ -19,7 +20,7 @@ class LargeSizeChar(object):
 
         # ˅
         try:
-            reader = open('big' + char_name + '.txt', 'r')
+            reader = open(os.path.join(os.path.dirname(__file__), 'big' + char_name + '.txt'), 'r')
             buffer = []
             for line in reader:
                 buffer.append(line)

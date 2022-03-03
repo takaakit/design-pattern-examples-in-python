@@ -30,7 +30,7 @@ class PageCreator(object):
 
     def create_simple_homepage(self, mail_address, html_file_name):
         # ˅
-        address_book = DataLibrary().get_instance().get_properties('./addressbook.txt')
+        address_book = DataLibrary().get_instance().get_properties(os.path.join(os.path.dirname(__file__), 'addressbook.txt'))
         user_name = address_book.get('address', mail_address)
         
         writer = HtmlWriter(html_file_name)
