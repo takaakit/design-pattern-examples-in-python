@@ -15,11 +15,7 @@ class Context(object):
 
         self.__iter = iter(line.split())
 
-        self.__current_iter = self.__iter
-
-        self.__iter_number = 0
-
-        self.__text_size = len(line.split())
+        self.__current_token = None
 
         # ˅
         self.next_token()
@@ -27,23 +23,22 @@ class Context(object):
 
     def next_token(self):
         # ˅
-        if self.__iter_number < self.__text_size:
-            self.__current_iter = next(self.__iter)
-            self.__iter_number += 1
-        else:
-            self.__current_iter = None
-        return self.__current_iter
+        try:
+            self.__current_token = next(self.__iter)
+        except StopIteration:
+            self.__current_token = None
+        return self.__current_token
         # ˄
 
     def get_token(self):
         # ˅
-        return self.__current_iter
+        return self.__current_token
         # ˄
 
     def slide_token(self, token):
         # ˅
-        if token != self.__current_iter:
-            exit('WARNING: ' + token + ' is expected but ' + str(self.__current_iter) + ' was found.')
+        if token != self.__current_token:
+            exit('WARNING: ' + token + ' is expected but ' + str(self.__current_token) + ' was found.')
         self.next_token()
         # ˄
 
