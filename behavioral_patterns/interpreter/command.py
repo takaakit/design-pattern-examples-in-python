@@ -21,8 +21,10 @@ class Command(Node):
 
     def parse(self, context):
         # ˅
+        # Write here to avoid circular import errors.
         from behavioral_patterns.interpreter.repeat import Repeat
         from behavioral_patterns.interpreter.action import Action
+
         _node = None
         if context.get_token() == 'repeat':
             _node = Repeat()

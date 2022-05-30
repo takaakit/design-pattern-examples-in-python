@@ -24,7 +24,9 @@ class Repeat(Node):
 
     def parse(self, context):
         # ˅
+        # Write here to avoid circular import errors.
         from behavioral_patterns.interpreter.command_list import CommandList
+
         context.slide_token('repeat')
 
         self.__number = context.get_number()
