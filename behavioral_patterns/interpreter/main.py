@@ -38,6 +38,7 @@ After parsing  : [program [repeat 4 [forward, right]]]
 '''
 
 if __name__ == '__main__':
+    # Reads commands line by line from the "program.txt" and parses them.
     with open(os.path.join(os.path.dirname(__file__), 'program.txt')) as fh:
         for line in fh:
             line = line.strip()

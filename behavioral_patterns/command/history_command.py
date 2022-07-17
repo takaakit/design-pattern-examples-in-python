@@ -21,6 +21,7 @@ class HistoryCommand(Command):
         pass
         # ˄
 
+    # Execute all past commands
     def execute(self):
         # ˅
         for past_command in self.__past_commands:

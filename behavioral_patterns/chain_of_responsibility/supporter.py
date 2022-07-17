@@ -37,7 +37,7 @@ class Supporter(object, metaclass=ABCMeta):
             self.__unsupported(trouble)
         # ˄
 
-    # Set a next supporter.
+    # Set a next supporter and return it.
     def set_next(self, next):
         # ˅
         self.__next = next
