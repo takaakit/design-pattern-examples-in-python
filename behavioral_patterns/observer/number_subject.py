@@ -30,6 +30,7 @@ class NumberSubject(Subject):
     @value.setter
     def value(self, value):
         # ˅
+        # Notify observers when the value is set.
         self.__value = value
         self.notify_observers()
         # ˄
