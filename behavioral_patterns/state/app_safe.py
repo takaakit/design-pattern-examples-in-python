@@ -123,6 +123,7 @@ class AppSafe(Context):
     def __count_up_time(self):
         # ˅
         while True:
+            # Advance one hour for every second of real time.
             for hour in range(0, 23, 1):
                 self.set_time(hour)      # Set the time
                 sleep(1)
