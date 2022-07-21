@@ -25,7 +25,7 @@ class Command(Node):
         from behavioral_patterns.interpreter.repeat import Repeat
         from behavioral_patterns.interpreter.action import Action
 
-        _node = None
+        _node: Node
         if context.get_token() == 'repeat':
             _node = Repeat()
             _node.parse(context)

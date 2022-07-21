@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
+from creational_patterns.abstract_factory.factory.factory import Factory
 from creational_patterns.abstract_factory.list_factory.list_factory import ListFactory
 from creational_patterns.abstract_factory.table_factory.table_factory import TableFactory
 
@@ -20,7 +21,7 @@ if __name__ == '__main__':
         print('Unexpected value.')
         sys.exit(1)
 
-    factory = None
+    factory: Factory
     if number == 1:
         factory = ListFactory()
     elif number == 2:

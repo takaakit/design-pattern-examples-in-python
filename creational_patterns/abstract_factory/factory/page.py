@@ -38,9 +38,8 @@ class Page(object, metaclass=ABCMeta):
     def output(self):
         # ˅
         file_name = self.title + '.html'
-        file = open(file_name, 'w')
-        file.write(self.to_html())
-        file.close()
+        with open(file_name, 'w') as f:
+            f.write(self.to_html())
         print(file_name + ' has been created.')
         print('Output File: ' + os.path.join(os.getcwd(), file_name))
         # ˄

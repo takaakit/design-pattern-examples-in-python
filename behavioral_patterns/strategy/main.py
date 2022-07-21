@@ -19,8 +19,8 @@ if __name__ == '__main__':
     for i in range(100):
         hand_of_player_1 = player_1.show_hand_signal()
         hand_of_player_2 = player_2.show_hand_signal()
-        result_of_player_1 = GameResultType.DRAW
-        result_of_player_2 = GameResultType.DRAW
+        result_of_player_1: GameResultType
+        result_of_player_2: GameResultType
         if hand_of_player_1.is_stronger_than(hand_of_player_2):
             print('Winner: ' + player_1.to_string())
             result_of_player_1 = GameResultType.WIN
