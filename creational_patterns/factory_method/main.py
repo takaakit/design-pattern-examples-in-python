@@ -11,7 +11,7 @@ The "createProduct()" is called a Factory Method, and it is responsible for manu
 if __name__ == '__main__':
     factory = CreditCardFactory()
 
-    jackson_card = factory.create('Jacson')
+    jackson_card = factory.create('Jackson')
     jackson_card.use()
 
     sophia_card = factory.create('Sophia')
