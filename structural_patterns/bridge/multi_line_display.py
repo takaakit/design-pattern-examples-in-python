@@ -20,7 +20,7 @@ class MultiLineDisplay(Display):
     def output_multiple(self, times):
         # ˅
         self.open()
-        for i in range(times):
+        for _ in range(times):
             self.write()
         self.close()
         # ˄

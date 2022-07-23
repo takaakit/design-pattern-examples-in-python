@@ -43,7 +43,7 @@ class RealPrinter(Printer):
     def __heavy_task(self, message):
         # ˅
         print(message, end='')
-        for i in range(10):
+        for _ in range(10):
             sleep(0.5)
             print('.', end='')
         print('Done.')

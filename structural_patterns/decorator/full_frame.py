@@ -41,7 +41,7 @@ class FullFrame(Frame):
     def __create_line(self, ch, size):
         # ˅
         buf = []
-        for i in range(size):
+        for _ in range(size):
             buf.append(ch)
         return ''.join(buf)
         # ˄

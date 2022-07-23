@@ -16,6 +16,6 @@ if __name__ == '__main__':
     number_subject.attach(DigitObserver(number_subject))
     number_subject.attach(BarChartObserver(number_subject))
 
-    for i in range(0, 20):
+    for _ in range(0, 20):
         number_subject.value = random.randrange(50)
         sleep(0.2)

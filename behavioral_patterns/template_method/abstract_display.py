@@ -32,7 +32,7 @@ class AbstractDisplay(object, metaclass=ABCMeta):
     def output(self):
         # ˅
         self.open()
-        for i in range(5):      # Repeat write 5 times
+        for _ in range(5):      # Repeat write 5 times
             self.write()
         self.close()
         # ˄

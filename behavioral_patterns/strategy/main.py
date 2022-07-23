@@ -16,7 +16,7 @@ if __name__ == '__main__':
     player_1 = Player('Emily', RandomStrategy())
     player_2 = Player('James', MirrorStrategy())
 
-    for i in range(100):
+    for _ in range(100):
         hand_of_player_1 = player_1.show_hand_signal()
         hand_of_player_2 = player_2.show_hand_signal()
 

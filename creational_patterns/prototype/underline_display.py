@@ -29,7 +29,7 @@ class UnderlineDisplay(Display):
         length = len(message)
         print('"' + message + '"')
         print(' ', end='')
-        for i in range(length):
+        for _ in range(length):
             print(self.__underline_char, end='')
         print('')
         # ˄

@@ -41,7 +41,7 @@ class TextDisplayImpl(DisplayImpl):
     def __print_line(self):
         # ˅
         print('*', end='')              # Display "*" mark at the beginning of a frame.
-        for i in range(self.__width):   # Display "." for the number of "width".
+        for _ in range(self.__width):   # Display "." for the number of "width".
             print('.', end='')
         print('*')                      # Display "*" mark at the end of a frame.
         # ˄
