@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from creational_patterns.prototype.framework.display import Display
 from creational_patterns.prototype.framework.manager import Manager
 from creational_patterns.prototype.underline_display import UnderlineDisplay
 from creational_patterns.prototype.frame_display import FrameDisplay
@@ -23,9 +24,9 @@ if __name__ == '__main__':
     manager.register_display('warning', warning_frame)
 
     # Require to display
-    display_1 = manager.get_display('emphasis')
+    display_1: Display = manager.get_display('emphasis')
     display_1.show('Nice to meet you.')
-    display_2 = manager.get_display('highlight')
+    display_2: Display = manager.get_display('highlight')
     display_2.show('Nice to meet you.')
-    display_1 = manager.get_display('warning')
-    display_1.show('Nice to meet you.')
+    display_3: Display = manager.get_display('warning')
+    display_3.show('Nice to meet you.')

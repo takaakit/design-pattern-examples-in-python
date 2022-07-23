@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ˅
+from creational_patterns.prototype.framework.display import Display
 
 # ˄
 
@@ -25,7 +26,7 @@ class Manager(object):
 
     def get_display(self, display_name):
         # ˅
-        d = self.__display[display_name]
+        d: Display = self.__display[display_name]
         return d.clone()
         # ˄
 
