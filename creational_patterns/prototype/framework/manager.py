@@ -27,7 +27,7 @@ class Manager(object):
     def get_display(self, display_name):
         # ˅
         d: Display = self.__display[display_name]
-        return d.clone()
+        return d.clone()    # Create a new object by asking a concrete class to clone itself. Therefore, do not need to know the concrete Display class name.
         # ˄
 
     # ˅
