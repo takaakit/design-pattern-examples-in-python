@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from structural_patterns.adapter.print_message_display import Print
 from structural_patterns.adapter.print_message_display import PrintMessageDisplay
 
 '''
@@ -14,6 +15,6 @@ or display it as follows.
 '''
 
 if __name__ == '__main__':
-    p = PrintMessageDisplay('Nice to meet you')
+    p: Print = PrintMessageDisplay('Nice to meet you')
     p.print_weak()
     p.print_strong()
