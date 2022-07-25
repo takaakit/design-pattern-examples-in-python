@@ -7,6 +7,7 @@ from structural_patterns.adapter.print import Print
 # ˄
 
 
+# Adapt the MessageDisplay interface to the Print interface.
 class PrintMessageDisplay(MessageDisplay, Print):
     # ˅
 
