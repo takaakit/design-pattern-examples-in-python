@@ -22,8 +22,8 @@ class LargeSizeString(object):
 
     def display(self):
         # ˅
-        for i in range(len(self.__large_size_chars)):
-            self.__large_size_chars[i].display()
+        for large_size_char in self.__large_size_chars:
+            large_size_char.display()
         # ˄
 
     # ˅

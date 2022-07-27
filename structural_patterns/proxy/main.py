@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from structural_patterns.proxy.printer import Printer
 from structural_patterns.proxy.proxy_printer import ProxyPrinter
 
 '''
@@ -8,7 +9,7 @@ At the time of printing, create an instance of the RealSubject (RealPrinter) for
 '''
 
 if __name__ == '__main__':
-    p = ProxyPrinter('PRINTER-A')
+    p: Printer = ProxyPrinter('PRINTER-A')
     print('The printer name is ' + p.get_name() + '.')
     p.change_name('PRINTER-B')
     print('The printer name is ' + p.get_name() + '.')
