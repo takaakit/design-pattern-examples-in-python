@@ -25,13 +25,16 @@ class ProxyPrinter(Printer):
 
     def get_name(self):
         # ˅
-        return self.__current_name
+        if self.__real is not None:
+            return self.__real.get_name()
+        else:
+            return self.__current_name
         # ˄
 
     def change_name(self, name):
         # ˅
         if self.__real is not None:
-            self.__real.set_printer_name(name)
+            self.__real.change_name(name)
         self.__current_name = name
         # ˄
 
