@@ -7,6 +7,7 @@ from structural_patterns.proxy.real_printer import RealPrinter
 # ˄
 
 
+# ProxyPrinter forwards requests to RealPrinter when appropriate.
 class ProxyPrinter(Printer):
     # ˅
 
@@ -35,13 +36,16 @@ class ProxyPrinter(Printer):
         # ˅
         if self.__real is not None:
             self.__real.change_name(name)
+
         self.__current_name = name
         # ˄
 
     def output(self, content):
         # ˅
+        # Check to see if the the RealPrinter had been created, create it if necessary.
         if self.__real is None:
             self.__real = RealPrinter(self.__current_name)
+
         self.__real.output(content)
         # ˄
 
