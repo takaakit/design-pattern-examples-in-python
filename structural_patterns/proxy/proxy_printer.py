@@ -42,7 +42,7 @@ class ProxyPrinter(Printer):
 
     def output(self, content):
         # ˅
-        # Check to see if the the RealPrinter had been created, create it if necessary.
+        # Check to see if the RealPrinter had been created, create it if necessary.
         if self.__real is None:
             self.__real = RealPrinter(self.__current_name)
 
