@@ -30,23 +30,23 @@ if __name__ == '__main__':
         print('The value is not 1 or 2.')
         sys.exit(1)
 
-    washington_post = factory.create_link('The Washington Post', 'https://www.washingtonpost.com/')
-    new_york_times = factory.create_link('The NewYork Times', 'https://www.nytimes.com/')
-    financial_times = factory.create_link('The Financial Times', 'https://www.ft.com/')
+    washington_post = factory.create_link(name='The Washington Post', url='https://www.washingtonpost.com/')
+    new_york_times = factory.create_link(name='The NewYork Times', url='https://www.nytimes.com/')
+    financial_times = factory.create_link(name='The Financial Times', url='https://www.ft.com/')
 
-    newspaper = factory.create_data('Newspaper')
+    newspaper = factory.create_data(name='Newspaper')
     newspaper.add(washington_post)
     newspaper.add(new_york_times)
     newspaper.add(financial_times)
 
-    yahoo = factory.create_link('Yahoo!', 'https://www.yahoo.com/')
-    google = factory.create_link('Google', 'https://www.google.com/')
+    yahoo = factory.create_link(name='Yahoo!', url='https://www.yahoo.com/')
+    google = factory.create_link(name='Google', url='https://www.google.com/')
 
-    search_engine = factory.create_data('Search engine')
+    search_engine = factory.create_data(name='Search engine')
     search_engine.add(yahoo)
     search_engine.add(google)
 
-    link_page = factory.create_page('LinkPage', 'James Smith')
+    link_page = factory.create_page(title='LinkPage', author='James Smith')
     link_page.add(newspaper)
     link_page.add(search_engine)
 

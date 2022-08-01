@@ -11,21 +11,21 @@ it possible to treat File and Directory uniformly.
 if __name__ == '__main__':
     print('Create a file system...')
 
-    bin_dir = Directory('bin')
-    bin_dir.add(File('ls', 20))
-    bin_dir.add(File('mkdir', 40))
+    bin_dir = Directory(name='bin')
+    bin_dir.add(File(name='ls', size=20))
+    bin_dir.add(File(name='mkdir', size=40))
 
-    emily_dir = Directory('emily')
-    emily_dir.add(File('homework.doc', 60))
+    emily_dir = Directory(name='emily')
+    emily_dir.add(File(name='homework.doc', size=60))
 
-    james_dir = Directory('james')
-    james_dir.add(File('app.exe', 80))
+    james_dir = Directory(name='james')
+    james_dir.add(File(name='app.exe', size=80))
 
-    home_dir = Directory('home')
+    home_dir = Directory(name='home')
     home_dir.add(emily_dir)
     home_dir.add(james_dir)
 
-    root_dir = Directory('root')
+    root_dir = Directory(name='root')
     root_dir.add(home_dir)
     root_dir.add(bin_dir)
 

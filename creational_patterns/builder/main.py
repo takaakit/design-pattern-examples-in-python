@@ -16,13 +16,13 @@ if __name__ == '__main__':
 
     if input_value == 'plain':
         plain_text_builder = PlainTextBuilder()
-        directory = Director(plain_text_builder)
+        directory = Director(builder=plain_text_builder)
         directory.build()
         content = plain_text_builder.get_content()
         print(content)
     elif input_value == 'html':
         html_builder = HTMLBuilder()
-        directory = Director(html_builder)
+        directory = Director(builder=html_builder)
         directory.build()
         file_name = html_builder.get_file_name()
         print(file_name + ' has been created.')

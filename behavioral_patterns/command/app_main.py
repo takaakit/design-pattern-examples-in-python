@@ -56,7 +56,9 @@ class AppMain(object):
 
     def on_dragged(self, event):
         # ˅
-        painting_command = PaintingCommand(self.__canvas, event.x, event.y)
+        painting_command = PaintingCommand(painting_target=self.__canvas,
+                                           painting_pos_x=event.x,
+                                           painting_pos_y=event.y)
         self.__history.add(painting_command)
         painting_command.execute()
         # ˄

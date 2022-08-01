@@ -16,14 +16,14 @@ There are four types of supporters below:
 '''
 
 if __name__ == '__main__':
-    emily = LazySupporter('Emily')
-    william = MoodySupporter('William')
-    amelia = SpecialSupporter('Amelia', 6)
-    joseph = LimitedSupporter('Joseph', 5)
+    emily = LazySupporter(name='Emily')
+    william = MoodySupporter(name='William')
+    amelia = SpecialSupporter(name='Amelia', target_id=6)
+    joseph = LimitedSupporter(name='Joseph', limit_id=5)
 
     # Make a chain.
     emily.set_next(william).set_next(amelia).set_next(joseph)
 
     # Various troubles occurred.
     for i in range(0, 10):
-        emily.support(Trouble(i))
+        emily.support(Trouble(id=i))

@@ -8,4 +8,5 @@ the DataLibrary and uses the info to create an HTML file.
 '''
 
 if __name__ == '__main__':
-    PageCreator().get_instance().create_simple_homepage('emily@example.com', 'Homepage.html')
+    PageCreator().get_instance().create_simple_homepage(mail_address='emily@example.com',
+                                                        html_file_name='Homepage.html')

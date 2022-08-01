@@ -13,8 +13,8 @@ A game of rock-scissors-paper. Two strategies are available:
 '''
 
 if __name__ == '__main__':
-    player_1 = Player('Emily', RandomStrategy())
-    player_2 = Player('James', MirrorStrategy())
+    player_1 = Player(name='Emily', strategy=RandomStrategy())
+    player_2 = Player(name='James', strategy=MirrorStrategy())
 
     for _ in range(100):
         hand_of_player_1 = player_1.show_hand_signal()
@@ -36,8 +36,12 @@ if __name__ == '__main__':
             result_of_player_1 = GameResultType.DRAW
             result_of_player_2 = GameResultType.DRAW
 
-        player_1.notify_game_result(result_of_player_1, hand_of_player_1, hand_of_player_2)
-        player_2.notify_game_result(result_of_player_2, hand_of_player_2, hand_of_player_1)
+        player_1.notify_game_result(result=result_of_player_1,
+                                    own_hand=hand_of_player_1,
+                                    opponents_hand=hand_of_player_2)
+        player_2.notify_game_result(result=result_of_player_2,
+                                    own_hand=hand_of_player_2,
+                                    opponents_hand=hand_of_player_1)
 
     print('RESULT:')
     print(player_1.to_string())

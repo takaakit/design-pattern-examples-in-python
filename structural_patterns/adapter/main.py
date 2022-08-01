@@ -15,6 +15,6 @@ or display it as follows.
 '''
 
 if __name__ == '__main__':
-    p: Print = PrintMessageDisplay('Nice to meet you')
+    p: Print = PrintMessageDisplay(message='Nice to meet you')
     p.print_weak()
     p.print_strong()

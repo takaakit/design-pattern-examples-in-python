@@ -12,7 +12,7 @@ A dice game in which money increases and decreases:
 '''
 
 if __name__ == '__main__':
-    gamer = Gamer(100)                      # The initial money is 100
+    gamer = Gamer(money=100)                # The initial money is 100
     memento = gamer.create_memento()        # Save the initial state
 
     for i in range(0, 10):

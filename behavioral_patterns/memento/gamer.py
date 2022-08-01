@@ -38,7 +38,7 @@ class Gamer(object):
     def play(self):
         # ˅
         dice = random.randrange(1, 6, 1)    # Shake a dice
-
+        print('The number of dice is ' + str(dice) + '.')
         pre_money = self.__money
         if dice == 1 or dice == 3 or dice == 5:
             # In case of odd...Money is halved

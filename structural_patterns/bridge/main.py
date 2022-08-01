@@ -9,9 +9,9 @@ Display only one line or display the specified number of lines.
 '''
 
 if __name__ == '__main__':
-    d_1 = Display(TextDisplayImpl('Japan'))
+    d_1 = Display(impl=TextDisplayImpl(text='Japan'))
     d_1.output()
 
-    d_2 = MultiLineDisplay(TextDisplayImpl('The United States of America'))
+    d_2 = MultiLineDisplay(impl=TextDisplayImpl(text='The United States of America'))
     d_2.output()
-    d_2.output_multiple(3)
+    d_2.output_multiple(times=3)
