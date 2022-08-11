@@ -44,10 +44,10 @@ class Context(object):
 
     def get_number(self):
         # ˅
-        if str(self.get_token()).isdigit():
-            return self.get_token()
+        if str(self.__current_token).isdigit():
+            return self.__current_token
         else:
-            exit('WARNING: ' + str(self.get_token()))
+            exit('WARNING: ' + str(self.__current_token))
         # ˄
 
     # ˅
