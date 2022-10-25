@@ -50,15 +50,15 @@ class AppSafe(Context):
         button_frame.pack()
 
         button_use = Button(button_frame, text='Use')
-        button_use.bind("<Button-1>", self.__pressed_use_button)
+        button_use.bind('<Button-1>', self.__pressed_use_button)
         button_use.grid(row=0, column=0)
 
         button_alarm = Button(button_frame, text='Alarm')
-        button_alarm.bind("<Button-1>", self.__pressed_alarm_button)
+        button_alarm.bind('<Button-1>', self.__pressed_alarm_button)
         button_alarm.grid(row=0, column=1)
 
         button_phone = Button(button_frame, text='Phone')
-        button_phone.bind("<Button-1>", self.__pressed_phone_button)
+        button_phone.bind('<Button-1>', self.__pressed_phone_button)
         button_phone.grid(row=0, column=2)
 
         count_up_time_thread = threading.Thread(target=self.__count_up_time)

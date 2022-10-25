@@ -21,8 +21,8 @@ class ColleagueButton(Colleague):
 
         # ˅
         super().__init__()
-        self.__button.bind("<ButtonPress-1>", self.__on_mouse_pressed)
-        self.__button.bind("<ButtonRelease-1>", self.__on_mouse_released)
+        self.__button.bind('<ButtonPress-1>', self.__on_mouse_pressed)
+        self.__button.bind('<ButtonRelease-1>', self.__on_mouse_released)
         # ˄
 
     # Set enable/disable from the Mediator

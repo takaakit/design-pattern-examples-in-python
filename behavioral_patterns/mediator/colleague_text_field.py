@@ -18,7 +18,7 @@ class ColleagueTextField(Colleague):
 
         # ˅
         super().__init__()
-        self.__text_field.bind("<KeyRelease>", self.__on_key_released)
+        self.__text_field.bind('<KeyRelease>', self.__on_key_released)
         # ˄
 
     # Set enable/disable from the Mediator
