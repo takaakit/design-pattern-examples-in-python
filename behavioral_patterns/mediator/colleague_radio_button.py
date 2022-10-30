@@ -28,9 +28,9 @@ class ColleagueRadioButton(Colleague):
     def set_activation(self, is_enable):
         # ˅
         if is_enable:
-            self.__radio_button.configure(state = NORMAL)
+            self.__radio_button.configure(state=NORMAL)
         else:
-            self.__radio_button.configure(state = DISABLED)
+            self.__radio_button.configure(state=DISABLED)
         # ˄
 
     def is_selected(self):

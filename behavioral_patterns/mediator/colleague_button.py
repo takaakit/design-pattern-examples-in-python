@@ -29,9 +29,9 @@ class ColleagueButton(Colleague):
     def set_activation(self, is_enable):
         # ˅
         if is_enable:
-            self.__button.configure(state = NORMAL)
+            self.__button.configure(state=NORMAL)
         else:
-            self.__button.configure(state = DISABLED)
+            self.__button.configure(state=DISABLED)
         # ˄
 
     def is_pressed(self):

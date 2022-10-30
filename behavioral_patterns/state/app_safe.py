@@ -62,7 +62,7 @@ class AppSafe(Context):
         button_phone.grid(row=0, column=2)
 
         count_up_time_thread = threading.Thread(target=self.__count_up_time)
-        count_up_time_thread.setDaemon(True)
+        count_up_time_thread.daemon = True
         count_up_time_thread.start()
 
         self.__master.mainloop()
