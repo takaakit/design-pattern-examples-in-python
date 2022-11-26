@@ -124,7 +124,7 @@ class AppSafe(Context):
         # ˅
         while True:
             # Advance one hour for every second of real time.
-            for hour in range(0, 23, 1):
+            for hour in range(0, 24):
                 self.set_time(hour)      # Set the time
                 sleep(1)
         # ˄
