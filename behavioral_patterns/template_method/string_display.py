@@ -39,10 +39,9 @@ class StringDisplay(AbstractDisplay):
 
     def __write_line(self):
         # ˅
-        print('+', end='')             # Display an end mark "+"
-        for _ in range(self.__width):
-            print('-', end='')         # Display a line "-"
-        print('+')                     # Display an end mark "+"
+        print('+', end='')                  # Display an end mark "+"
+        print('-' * self.__width, end='')   # Display a line "-"
+        print('+')                          # Display an end mark "+"
         # ˄
 
     # ˅

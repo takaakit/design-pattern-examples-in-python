@@ -26,12 +26,8 @@ class UnderlineDisplay(Display):
 
     def show(self, message):
         # ˅
-        length = len(message)
         print('"' + message + '"')
-        print(' ', end='')
-        for _ in range(length):
-            print(self.__underline_char, end='')
-        print('')
+        print(' ' + (self.__underline_char * len(message)))
         # ˄
 
     # ˅
