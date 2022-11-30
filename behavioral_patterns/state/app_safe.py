@@ -73,9 +73,9 @@ class AppSafe(Context):
         # ˅
         clock_string = 'Current Time : '
         if hour < 10:
-            clock_string += '0' + str(hour) + ':00'
+            clock_string += f'0{hour}:00'
         else:
-            clock_string += str(hour) + ':00'
+            clock_string += f'{hour}:00'
         
         print(clock_string)
         self.__text_time.delete(0, 'end')
@@ -87,21 +87,21 @@ class AppSafe(Context):
     # Change state
     def change_state(self, state):
         # ˅
-        print('The state changed from ' + self.__state.to_string() + ' to ' + state.to_string())
+        print(f'The state changed from {self.__state.to_string()} to {state.to_string()}')
         self.__state = state
         # ˄
 
     # Call a security guard room
     def call_security_guards_room(self, msg):
         # ˅
-        self.__text_message.insert('end', 'call! ' + msg + '\n')
+        self.__text_message.insert('end', f'call! {msg}\n')
         self.__text_message.yview_moveto(1)     # Scroll to the bottom
         # ˄
 
     # Record security log
     def record_security_log(self, msg):
         # ˅
-        self.__text_message.insert('end', 'record ... ' + msg + '\n')
+        self.__text_message.insert('end', f'record ... {msg}\n')
         self.__text_message.yview_moveto(1)     # Scroll to the bottom
         # ˄
 

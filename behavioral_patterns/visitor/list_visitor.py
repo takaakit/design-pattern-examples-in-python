@@ -23,15 +23,15 @@ class ListVisitor(Visitor):
     # Visit a file
     def visit_file(self, file):
         # ˅
-        print(self.__current_directory + '/' + file.to_string())
+        print(f'{self.__current_directory}/{file.to_string()}')
         # ˄
 
     # Visit a directory
     def visit_directory(self, directory):
         # ˅
-        print(self.__current_directory + '/' + directory.to_string())
+        print(f'{self.__current_directory}/{directory.to_string()}')
         visited_directory = self.__current_directory
-        self.__current_directory = self.__current_directory + '/' + directory.get_name()
+        self.__current_directory = f'{self.__current_directory}/{directory.get_name()}'
         for it in iter(directory):
             it.accept(self)
         self.__current_directory = visited_directory

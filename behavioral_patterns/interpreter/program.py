@@ -36,7 +36,7 @@ class Program(Node):
     def to_string(self):
         # ˅
         if self.__command_list is not None:
-            return '[program ' + self.__command_list.to_string() + ']'
+            return f'[program {self.__command_list.to_string()}]'
         else:
             return ''
         # ˄

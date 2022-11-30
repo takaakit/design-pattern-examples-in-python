@@ -17,7 +17,7 @@ class RealPrinter(Printer):
         self.__name = name
 
         # ˅
-        self.__heavy_task('Creating an instance (' + self.__name + ') of the Printer')
+        self.__heavy_task(f'Creating an instance ({self.__name}) of the Printer')
         # ˄
 
     def get_name(self):
@@ -35,7 +35,7 @@ class RealPrinter(Printer):
         # ˅
         print('==========')
         print(content)
-        print('Printed by ' + self.__name)
+        print(f'Printed by {self.__name}')
         print('==========')
         # ˄
 

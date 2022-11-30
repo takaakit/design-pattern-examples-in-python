@@ -28,7 +28,7 @@ class FrameDisplay(Display):
         # ˅
         length = len(message)
         print(self.__border_char * (length + 4))
-        print(self.__border_char + ' ' + message + ' ' + self.__border_char)
+        print(f'{self.__border_char} {message} {self.__border_char}')
         print(self.__border_char * (length + 4))
         # ˄
 

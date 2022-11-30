@@ -29,7 +29,7 @@ class StringDisplay(AbstractDisplay):
 
     def write(self):
         # ˅
-        print('|' + self.__string + '|')  # Display the character with "|"
+        print(f'|{self.__string}|')  # Display the character with "|"
         # ˄
 
     def close(self):

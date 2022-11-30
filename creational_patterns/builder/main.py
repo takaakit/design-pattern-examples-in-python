@@ -25,8 +25,8 @@ if __name__ == '__main__':
         directory = Director(builder=html_builder)
         directory.build()
         file_name = html_builder.get_file_name()
-        print(file_name + ' has been created.')
-        print('Output File: ' + os.path.join(os.getcwd(), file_name))
+        print(f'{file_name} has been created.')
+        print(f'Output File: {os.path.join(os.getcwd(), file_name)}')
     else:
         print('The value is not "plain" or "html".')
         sys.exit(1)

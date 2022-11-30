@@ -24,7 +24,7 @@ class BarChartObserver(Observer):
         # ˅
         # Before processing, it checks to make sure the changed subject is the subject held.
         if changedSubject is self.__numberSubject:
-            print('Bar chart: ' + ('*' * self.__numberSubject.value))
+            print(f'Bar chart: {"*" * self.__numberSubject.value}')
         # ˄
 
     # ˅

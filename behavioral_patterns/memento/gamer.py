@@ -38,16 +38,16 @@ class Gamer(object):
     def play(self):
         # ˅
         dice = random.randrange(1, 6, 1)    # Shake a dice
-        print('The number of dice is ' + str(dice) + '.')
+        print(f'The number of dice is {dice}.')
         pre_money = self.__money
         if dice == 1 or dice == 3 or dice == 5:
             # In case of odd...Money is halved
             self.__money = int(self.__money / 2)
-            print('Gamer\'s money is halved: ' + str(pre_money) + ' -> ' + str(self.__money))
+            print(f'Gamer\'s money is halved: {pre_money} -> {self.__money}')
         elif dice == 2 or dice == 4 or dice == 6:
             # In case of even...Money doubles
             self.__money = int(self.__money * 2)
-            print('Gamer\'s money doubles: ' + str(pre_money) + ' -> ' + str(self.__money))
+            print(f'Gamer\'s money doubles: {pre_money} -> {self.__money}')
         else:
             # Other...Exit
             print('Unexpected value.')
@@ -56,7 +56,7 @@ class Gamer(object):
 
     def to_string(self):
         # ˅
-        return '[money = ' + str(self.__money) + ']'
+        return f'[money = {self.__money}]'
         # ˄
 
     @property

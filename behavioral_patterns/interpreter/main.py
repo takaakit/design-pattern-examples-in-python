@@ -42,7 +42,7 @@ if __name__ == '__main__':
     with open(os.path.join(os.path.dirname(__file__), 'program.txt')) as fh:
         for line in fh:
             line = line.strip()
-            print('Before parsing : ' + line)
+            print(f'Before parsing : {line}')
             node = Program()
             node.parse(Context(line))
-            print('After parsing  : ' + node.to_string())
+            print(f'After parsing  : {node.to_string()}')

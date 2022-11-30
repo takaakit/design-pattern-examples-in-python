@@ -20,12 +20,12 @@ class MessageDisplay(object):
 
     def display_with_hyphens(self):
         # ˅
-        print('-- ' + self.__message + ' --')
+        print(f'-- {self.__message} --')
         # ˄
 
     def display_with_brackets(self):
         # ˅
-        print('[[ ' + self.__message + ' ]]')
+        print(f'[[ {self.__message} ]]')
         # ˄
 
     # ˅

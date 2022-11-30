@@ -20,7 +20,7 @@ class TableData(Data):
         # ˅
         buffer = list()
         buffer.append('<td><table width="100%" border="2">\n')
-        buffer.append('<tr><td bgcolor="#00CC00" align="center" colspan="' + str(len(self.items)) + '"><b>' + self.name + '</b></td></tr>\n')
+        buffer.append(f'<tr><td bgcolor="#00CC00" align="center" colspan="{len(self.items)}"><b>{self.name}</b></td></tr>\n')
         buffer.append('<tr>\n')
         for item in self.items:
             buffer.append(item.to_html())

@@ -24,11 +24,11 @@ if __name__ == '__main__':
         result_of_player_1: GameResultType
         result_of_player_2: GameResultType
         if hand_of_player_1.is_stronger_than(hand_of_player_2):
-            print('Winner: ' + player_1.to_string())
+            print(f'Winner: {player_1.to_string()}')
             result_of_player_1 = GameResultType.WIN
             result_of_player_2 = GameResultType.LOSS
         elif hand_of_player_2.is_stronger_than(hand_of_player_1):
-            print('Winner: ' + player_2.to_string())
+            print(f'Winner: {player_2.to_string()}')
             result_of_player_1 = GameResultType.LOSS
             result_of_player_2 = GameResultType.WIN
         else:

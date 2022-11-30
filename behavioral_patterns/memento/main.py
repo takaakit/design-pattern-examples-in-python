@@ -16,7 +16,7 @@ if __name__ == '__main__':
     memento = gamer.create_memento()        # Save the initial state
 
     for i in range(0, 10):
-        print('==== Turn ' + str(i + 1))    # Display count
+        print(f'==== Turn {i + 1}')         # Display count
 
         gamer.play()                        # Play a game
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
         elif gamer.money < memento.money / 2:
             print('(Gamer\'s money is less than half of the highest amount, so return to the recorded state.)')
             gamer.set_memento(memento)
-            print('Gamer\'s money returns to ' + str(gamer.money) + '.')
+            print(f'Gamer\'s money returns to {gamer.money}.')
 
         print('')
 

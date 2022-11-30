@@ -16,12 +16,12 @@ class CreditCard(Product):
         self.__owner = owner
 
         # ˅
-        print('Make ' + self.__owner + '\'s card.')
+        print(f'Make {self.__owner}\'s card.')
         # ˄
 
     def use(self):
         # ˅
-        print('Use ' + self.__owner + '\'s card.')
+        print(f'Use {self.__owner}\'s card.')
         # ˄
 
     # ˅

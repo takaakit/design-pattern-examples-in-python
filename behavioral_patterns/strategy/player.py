@@ -50,7 +50,7 @@ class Player(object):
 
     def to_string(self):
         # ˅
-        return self.__name + ' [' + str(self.__game_count) + ' games, ' + str(self.__win_count) + ' won, ' + str(self.__loss_count) + ' lost, ' + str(self.__game_count - self.__win_count - self.__loss_count) + ' drew]'
+        return f'{self.__name} [{self.__game_count} games, {self.__win_count} won, {self.__loss_count} lost, {self.__game_count - self.__win_count - self.__loss_count} drew]'
         # ˄
 
     # ˅

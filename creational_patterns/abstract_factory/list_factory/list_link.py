@@ -18,7 +18,7 @@ class ListLink(Link):
 
     def to_html(self):
         # ˅
-        return '  <li><a href="' + self.url + '">' + self.name + '</a></li>\n'
+        return f'  <li><a href="{self.url}">{self.name}</a></li>\n'
         # ˄
 
     # ˅

@@ -34,7 +34,7 @@ class File(FileSystemElement):
     # Print this element with the "upper_path".
     def print(self, upper_path):
         # ˅
-        print(upper_path + '/' + self.to_string())
+        print(f'{upper_path}/{self.to_string()}')
         # ˄
 
     # ˅

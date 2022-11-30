@@ -18,14 +18,14 @@ class LargeSizeChar(object):
 
         # ˅
         try:
-            reader = open(os.path.join(os.path.dirname(__file__), 'big' + char_name + '.txt'), 'r')
+            reader = open(os.path.join(os.path.dirname(__file__), f'big{char_name}.txt'), 'r')
             buffer = []
             for line in reader:
                 buffer.append(line)
             reader.close()
             self.__display_data = ''.join(buffer)
         except IOError:
-            self.__display_data = char_name + '?'
+            self.__display_data = f'{char_name}?'
         # ˄
 
     # Display the large size character

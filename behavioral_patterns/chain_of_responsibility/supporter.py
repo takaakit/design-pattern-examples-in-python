@@ -53,13 +53,13 @@ class Supporter(object, metaclass=ABCMeta):
     # Trouble was supported.
     def __supported(self, trouble):
         # ˅
-        print(trouble.to_string() + ' was handled by ' + self.__name + '.')
+        print(f'{trouble.to_string()} was handled by {self.__name}.')
         # ˄
 
     # Trouble was unsupported.
     def __unsupported(self, trouble):
         # ˅
-        print(trouble.to_string() + ' was not handled.')
+        print(f'{trouble.to_string()} was not handled.')
         # ˄
 
     # ˅

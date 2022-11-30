@@ -30,7 +30,7 @@ class TextDisplayImpl(DisplayImpl):
 
     def impl_write(self):
         # ˅
-        print(':' + self.__text + ':')  # Enclose a text with ":" and display it.
+        print(f':{self.__text}:')       # Enclose a text with ":" and display it.
         # ˄
 
     def impl_close(self):

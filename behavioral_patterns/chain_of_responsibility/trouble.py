@@ -21,7 +21,7 @@ class Trouble(object):
 
     def to_string(self):
         # ˅
-        return '[Trouble ' + str(self.id) + ']'
+        return f'[Trouble {self.id}]'
         # ˄
 
     # ˅

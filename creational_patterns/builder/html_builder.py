@@ -25,16 +25,16 @@ class HTMLBuilder(Builder):
     # Make a title of HTML file
     def create_title(self, title):
         # ˅
-        self.__file_name = title + '.html'       # Set a title as a file name
+        self.__file_name = f'{title}.html'       # Set a title as a file name
         self.__writer = open(self.__file_name, 'w')
-        self.__writer.write('<html><head><title>' + title + '</title></head><body>')
-        self.__writer.write('<h1>' + title + '</h1>')
+        self.__writer.write(f'<html><head><title>{title}</title></head><body>')
+        self.__writer.write(f'<h1>{title}</h1>')
         # ˄
 
     # Make a section of HTML file
     def create_section(self, section):
         # ˅
-        self.__writer.write('<p>' + section + '</p>')   # Write a section
+        self.__writer.write(f'<p>{section}</p>')   # Write a section
         # ˄
 
     # Make items of HTML file
@@ -42,7 +42,7 @@ class HTMLBuilder(Builder):
         # ˅
         self.__writer.write('<ul>')         # Write items
         for item in items:
-            self.__writer.write('<li>' + item + '</li>')
+            self.__writer.write(f'<li>{item}</li>')
         self.__writer.write('</ul>')
         # ˄
 

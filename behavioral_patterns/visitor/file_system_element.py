@@ -26,7 +26,7 @@ class FileSystemElement(Element, metaclass=ABCMeta):
 
     def to_string(self):
         # ˅
-        return self.get_name() + ' (' + str(self.get_size()) + ')'
+        return f'{self.get_name()} ({self.get_size()})'
         # ˄
 
     # ˅
