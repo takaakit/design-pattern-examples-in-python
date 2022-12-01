@@ -18,8 +18,7 @@ if __name__ == '__main__':
     try:
         number = int(input_value)
     except ValueError:
-        print('Unexpected value.')
-        sys.exit(1)
+        exit('ERROR: Unexpected value.')
 
     factory: Factory
     if number == 1:
@@ -27,8 +26,7 @@ if __name__ == '__main__':
     elif number == 2:
         factory = TableFactory()
     else:
-        print('The value is not 1 or 2.')
-        sys.exit(1)
+        exit('ERROR: The value is not 1 or 2.')
 
     washington_post = factory.create_link(name='The Washington Post', url='https://www.washingtonpost.com/')
     new_york_times = factory.create_link(name='The NewYork Times', url='https://www.nytimes.com/')

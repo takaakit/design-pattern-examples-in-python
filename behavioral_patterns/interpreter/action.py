@@ -24,7 +24,7 @@ class Action(Node):
         # ˅
         current_token = context.get_token()
         if current_token != 'forward' and current_token != 'right' and current_token != 'left':
-            exit(f'{current_token} is unknown')
+            exit(f'ERROR: {current_token} is unknown')
 
         self.__name = current_token     # Hold the current token as this action name
 

@@ -28,5 +28,4 @@ if __name__ == '__main__':
         print(f'{file_name} has been created.')
         print(f'Output File: {os.path.join(os.getcwd(), file_name)}')
     else:
-        print('The value is not "plain" or "html".')
-        sys.exit(1)
+        exit('ERROR: The value is not "plain" or "html".')

@@ -50,8 +50,7 @@ class Gamer(object):
             print(f'Gamer\'s money doubles: {pre_money} -> {self.__money}')
         else:
             # Other...Exit
-            print('Unexpected value.')
-            sys.exit(1)
+            exit('ERROR: Unexpected value.')
         # ˄
 
     def to_string(self):

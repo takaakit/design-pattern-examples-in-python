@@ -21,8 +21,7 @@ class SideFrame(Frame):
         super().__init__(display)
 
         if len(self.__frame_char) != 1:
-            print('Only one character is allowed in a side frame.')
-            sys.exit(1)
+            exit('ERROR: Only one character is allowed in a side frame.')
         # ˄
 
     # Number of characters added left and right decoration characters
