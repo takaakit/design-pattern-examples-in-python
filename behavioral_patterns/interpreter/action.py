@@ -28,7 +28,7 @@ class Action(Node):
 
         self.__name = current_token     # Hold the current token as this action name
 
-        context.slide_token(current_token)
+        context.slide_token(token=current_token)
         # ˄
 
     def to_string(self):

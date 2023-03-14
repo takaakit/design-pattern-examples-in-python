@@ -32,7 +32,7 @@ class Subject(object):
     def notify_observers(self):
         # ˅
         for observer in self.__observers:
-            observer.update(self)
+            observer.update(changedSubject=self)
         # ˄
 
     # ˅

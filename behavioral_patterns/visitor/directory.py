@@ -25,7 +25,7 @@ class Directory(FileSystemElement):
     # Accept a visitor
     def accept(self, visitor):
         # ˅
-        visitor.visit_directory(self)
+        visitor.visit_directory(directory=self)
         # ˄
 
     # Directory name

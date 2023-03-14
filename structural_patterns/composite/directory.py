@@ -39,7 +39,7 @@ class Directory(FileSystemElement):
         # ˅
         print(f'{upper_path}/{self.to_string()}')
         for element in self.__elements:
-            element.print(f'{upper_path}/{self.get_name()}')
+            element.print(upper_path=f'{upper_path}/{self.get_name()}')
         # ˄
 
     # Add an element

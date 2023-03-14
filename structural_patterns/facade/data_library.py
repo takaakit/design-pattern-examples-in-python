@@ -30,7 +30,7 @@ class DataLibrary(object):
     def get_properties(self, data_library_name):
         # ˅
         prop = configparser.ConfigParser()
-        prop.read(data_library_name, 'UTF-8')
+        prop.read(filenames=data_library_name, encoding='UTF-8')
 
         return prop
         # ˄

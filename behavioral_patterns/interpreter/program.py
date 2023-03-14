@@ -25,7 +25,7 @@ class Program(Node):
         # Write here to avoid circular import errors.
         from behavioral_patterns.interpreter.command_list import CommandList
 
-        context.slide_token('program')
+        context.slide_token(token='program')
 
         _command_list = CommandList()
         _command_list.parse(context)

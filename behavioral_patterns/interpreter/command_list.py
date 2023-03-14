@@ -28,7 +28,7 @@ class CommandList(Node):
             if context.get_token() is None:
                 exit('ERROR: Missing \'end\'')
             elif context.get_token() == 'end':
-                context.slide_token('end')
+                context.slide_token(token='end')
                 break
             else:
                 _node = Command()

@@ -21,7 +21,7 @@ class UnderlineDisplay(Display):
 
     def clone(self):
         # ˅
-        return UnderlineDisplay(self.__underline_char)
+        return UnderlineDisplay(underline_char=self.__underline_char)
         # ˄
 
     def show(self, message):

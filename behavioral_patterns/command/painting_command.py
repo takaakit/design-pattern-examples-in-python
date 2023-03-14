@@ -28,7 +28,8 @@ class PaintingCommand(Command):
 
     def execute(self):
         # ˅
-        self.__painting_target.paint(self.__painting_pos_x, self.__painting_pos_y)
+        self.__painting_target.paint(x=self.__painting_pos_x,
+                                     y=self.__painting_pos_y)
         # ˄
 
     # ˅

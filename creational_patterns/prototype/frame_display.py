@@ -21,7 +21,7 @@ class FrameDisplay(Display):
 
     def clone(self):
         # ˅
-        return FrameDisplay(self.__border_char)
+        return FrameDisplay(border_char=self.__border_char)
         # ˄
 
     def show(self, message):

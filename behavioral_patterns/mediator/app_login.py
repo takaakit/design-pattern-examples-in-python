@@ -86,7 +86,7 @@ class AppLogin(Mediator):
             variable=self.val,
             value=0)
         radio_button_guest.grid(row=0, column=0)
-        self.__radio_guest = ColleagueRadioButton(radio_button_guest)
+        self.__radio_guest = ColleagueRadioButton(radio_button=radio_button_guest)
 
         radio_button_login = Radiobutton(
             radio_button_frame,
@@ -94,7 +94,7 @@ class AppLogin(Mediator):
             variable=self.val,
             value=1)
         radio_button_login.grid(row=0, column=1)
-        self.__radio_login = ColleagueRadioButton(radio_button_login)
+        self.__radio_login = ColleagueRadioButton(radio_button=radio_button_login)
 
         text_field_frame = Frame(self.__master)
         text_field_frame.pack()
@@ -107,22 +107,22 @@ class AppLogin(Mediator):
 
         text_username = Entry(text_field_frame, width=20)
         text_username.grid(row=0, column=1)
-        self.__text_username = ColleagueTextField(text_username)
+        self.__text_username = ColleagueTextField(text_field=text_username)
 
         text_password = Entry(text_field_frame, width=20, show='*')
         text_password.grid(row=1, column=1)
-        self.__text_password = ColleagueTextField(text_password)
+        self.__text_password = ColleagueTextField(text_field=text_password)
 
         button_frame = Frame(self.__master)
         button_frame.pack(anchor=E)
 
         button_ok = Button(button_frame, text='OK')
         button_ok.grid(row=0, column=0)
-        self.__button_ok = ColleagueButton(button_ok)
+        self.__button_ok = ColleagueButton(button=button_ok)
 
         button_cancel = Button(button_frame, text='Cancel')
         button_cancel.grid(row=0, column=1)
-        self.__button_cancel = ColleagueButton(button_cancel)
+        self.__button_cancel = ColleagueButton(button=button_cancel)
         # ˄
 
     # ˅

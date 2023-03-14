@@ -17,7 +17,7 @@ class LargeSizeString(object):
 
         # ˅
         for c in list(string):
-            self.__large_size_chars.append(LargeSizeCharFactory().get_instance().get_large_size_char(c))
+            self.__large_size_chars.append(LargeSizeCharFactory().get_instance().get_large_size_char(char_name=c))
         # ˄
 
     def display(self):

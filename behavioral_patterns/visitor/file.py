@@ -23,7 +23,7 @@ class File(FileSystemElement):
 
     def accept(self, visitor):
         # ˅
-        visitor.visit_file(self)
+        visitor.visit_file(file=self)
         # ˄
 
     # File name

@@ -38,7 +38,7 @@ class SideFrame(Frame):
 
     def get_line_text(self, row):
         # ˅
-        return self.__frame_char + self.display.get_line_text(row) + self.__frame_char
+        return self.__frame_char + self.display.get_line_text(row=row) + self.__frame_char
         # ˄
 
     # ˅

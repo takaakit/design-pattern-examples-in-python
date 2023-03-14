@@ -25,7 +25,7 @@ class Gamer(object):
 
     def create_memento(self):
         # ˅
-        memento = Memento(self.__money)
+        memento = Memento(money=self.__money)
         return memento
         # ˄
 
@@ -37,7 +37,7 @@ class Gamer(object):
     # Play a game
     def play(self):
         # ˅
-        dice = random.randrange(1, 6, 1)    # Shake a dice
+        dice = random.randrange(start=1, stop=6, step=1)    # Shake a dice
         print(f'The number of dice is {dice}.')
         pre_money = self.__money
         if dice == 1 or dice == 3 or dice == 5:

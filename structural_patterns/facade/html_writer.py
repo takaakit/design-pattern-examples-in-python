@@ -49,7 +49,7 @@ class HtmlWriter(object):
     # Write a link
     def __anchor(self, url, text):
         # ˅
-        self.paragraph(f'<a href="{url}">{text}</a>')
+        self.paragraph(message=f'<a href="{url}">{text}</a>')
         # ˄
 
     # ˅

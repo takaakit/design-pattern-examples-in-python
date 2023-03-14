@@ -32,22 +32,22 @@ class NightState(State):
             # To avoid circular import of DaytimeState and NightState, write this import here, not at the beginning of this file.
             from behavioral_patterns.state.daytime_state import DaytimeState
 
-            context.change_state(DaytimeState.get_instance())
+            context.change_state(state=DaytimeState.get_instance())
         # ˄
 
     def use(self, context):
         # ˅
-        context.call_security_guards_room('Emergency: Use a safe at night!')
+        context.call_security_guards_room(msg='Emergency: Use a safe at night!')
         # ˄
 
     def alarm(self, context):
         # ˅
-        context.call_security_guards_room('Sound an emergency bell at night')
+        context.call_security_guards_room(msg='Sound an emergency bell at night')
         # ˄
 
     def phone(self, context):
         # ˅
-        context.record_security_log('Record a night call')
+        context.record_security_log(msg='Record a night call')
         # ˄
 
     def to_string(self):

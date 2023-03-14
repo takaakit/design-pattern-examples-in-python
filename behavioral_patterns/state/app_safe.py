@@ -81,7 +81,7 @@ class AppSafe(Context):
         self.__text_time.delete(0, 'end')
         self.__text_time.insert(0, clock_string)
         
-        self.__state.set_time(self, hour)
+        self.__state.set_time(context=self, hour=hour)
         # ˄
 
     # Change state
@@ -107,17 +107,17 @@ class AppSafe(Context):
 
     def __pressed_use_button(self, event):
         # ˅
-        self.__state.use(self)
+        self.__state.use(context=self)
         # ˄
 
     def __pressed_alarm_button(self, event):
         # ˅
-        self.__state.alarm(self)
+        self.__state.alarm(context=self)
         # ˄
 
     def __pressed_phone_button(self, event):
         # ˅
-        self.__state.phone(self)
+        self.__state.phone(context=self)
         # ˄
 
     def __count_up_time(self):

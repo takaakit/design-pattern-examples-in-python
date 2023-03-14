@@ -13,8 +13,8 @@ if __name__ == '__main__':
     display_a: Display = MessageDisplay(message='Nice to meet you.')
     display_a.show()
 
-    display_b: Display = SideFrame(MessageDisplay(message='Nice to meet you.'), frame_char='!')
+    display_b: Display = SideFrame(display=MessageDisplay(message='Nice to meet you.'), frame_char='!')
     display_b.show()
 
-    display_c: Display = FullFrame(SideFrame(MessageDisplay(message='Nice to meet you.'), frame_char='!'))
+    display_c: Display = FullFrame(display=SideFrame(display=MessageDisplay(message='Nice to meet you.'), frame_char='!'))
     display_c.show()

@@ -27,10 +27,10 @@ class Repeat(Node):
         # Write here to avoid circular import errors.
         from behavioral_patterns.interpreter.command_list import CommandList
 
-        context.slide_token('repeat')
+        context.slide_token(token='repeat')
 
         self.__number = context.get_number()
-        context.slide_token(str(self.__number))
+        context.slide_token(token=str(self.__number))
 
         _command_list = CommandList()
         _command_list.parse(context)

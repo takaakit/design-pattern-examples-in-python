@@ -13,8 +13,8 @@ The display formats are digits and bar charts.
 
 if __name__ == '__main__':
     number_subject = NumberSubject()
-    number_subject.attach(DigitObserver(number_subject))
-    number_subject.attach(BarChartObserver(number_subject))
+    number_subject.attach(observer=DigitObserver(number_subject))
+    number_subject.attach(observer=BarChartObserver(number_subject))
 
     for _ in range(0, 20):
         number_subject.value = random.randrange(50)

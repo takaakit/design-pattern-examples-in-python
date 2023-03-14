@@ -35,7 +35,7 @@ class FullFrame(Frame):
         elif row == self.display.get_rows() + 1:
             return '+' + self.__create_line('-', self.display.get_columns()) + '+'  # Bottom frame
         else:
-            return '|' + self.display.get_line_text(row - 1) + '|'                  # Other
+            return '|' + self.display.get_line_text(row=row - 1) + '|'              # Other
         # ˄
 
     def __create_line(self, ch, size):

@@ -33,7 +33,7 @@ class ListVisitor(Visitor):
         visited_directory = self.__current_directory
         self.__current_directory = f'{self.__current_directory}/{directory.get_name()}'
         for it in iter(directory):
-            it.accept(self)
+            it.accept(visitor=self)
         self.__current_directory = visited_directory
         # ˄
 

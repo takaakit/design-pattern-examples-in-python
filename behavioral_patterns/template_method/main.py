@@ -8,8 +8,8 @@ Display a character or string repeatedly 5 times.
 '''
 
 if __name__ == '__main__':
-    display_1 = CharDisplay('H')
+    display_1 = CharDisplay(char='H')
     display_1.output()
 
-    display_2 = StringDisplay('Hello world.')
+    display_2 = StringDisplay(string='Hello world.')
     display_2.output()

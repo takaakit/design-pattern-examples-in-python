@@ -24,7 +24,7 @@ class BookShelf(Aggregate):
 
     def iterator(self):
         # ˅
-        return BookShelfIterator(self)
+        return BookShelfIterator(book_shelf=self)
         # ˄
 
     def get_at(self, index):

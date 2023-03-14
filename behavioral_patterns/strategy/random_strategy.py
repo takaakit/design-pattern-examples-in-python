@@ -21,7 +21,7 @@ class RandomStrategy(Strategy):
 
     def show_hand_signal(self):
         # ˅
-        return get_hand(random.randrange(3))
+        return get_hand(hand_value=random.randrange(3))
         # ˄
 
     def notify_game_result(self, result, own_hand, opponents_hand):
