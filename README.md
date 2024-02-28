@@ -75,7 +75,7 @@ Installation
   [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
 **Python Development Environment**  
-* Install Python with tkinter included. The operation has been confirmed in **Python 3.7.0**.
+* Install Python with tkinter included. The operation has been confirmed in **Python 3.12.2**.
 * Optionally, install an IDE (e.g. [PyCharm](https://www.jetbrains.com/pycharm/download/)).
 
 Usage
