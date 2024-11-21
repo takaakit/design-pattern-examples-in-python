@@ -8,7 +8,7 @@ This project is available for the following objectives:
 
 * To understand GoF Design Pattern examples in Python.
 * To understand the mapping between UML model and Python code.
-* To try Model-Driven Development (MDD) using Astah and M PLUS plug-in.
+* To try model-driven development (MDD) using Astah and m plus plug-in.
 
 > UML model example:
 
@@ -70,8 +70,8 @@ class File(FileSystemElement):
 Installation
 ------------
 **UML Modeling Tool**
-* Download the modeling tool [Astah](https://astah.net/download) UML or Professional, and install.  
-* Download [M PLUS](https://sites.google.com/view/m-plus-plugin/download) plug-in **ver.2.1** or higher, and add it to Astah.  
+* Download the modeling tool [Astah](https://astah.net/download) UML/Professional **ver.10.0.0** or higher, and install.  
+* Download [m plus](https://sites.google.com/view/m-plus-plugin/download) plug-in **ver.3.0.0-preview** or higher, and add it to Astah.  
   [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
 **Python Development Environment**  
@@ -86,7 +86,7 @@ Usage
   3. Click the **Generate Code** button.  
   ![](./screenshots/GenerateCode.gif "Generate Code")  
   The generated code has **User Code Area**. The User Code Area is the area enclosed by "˅" and "˄". Handwritten code written in the User Code Area remains after a re-generation. [View code example](#code-example).  
-  For detailed usage of the tools, please see [Astah Manual](https://astah.net/manual) and [M PLUS plug-in Tips](https://sites.google.com/view/m-plus-plugin-tips).
+  For detailed usage of the tools, please see [Astah Manual](https://astah.net/manual) and [m plus plug-in tips](https://sites.google.com/view/m-plus-plugin-tips).
 
 **Run (if you use PyCharm)**
   1. Open the project root directory (design-pattern-examples-in-python) in PyCharm.
@@ -98,7 +98,7 @@ References
 * Gamma, E. et al. Design Patterns: Elements of Reusable Object-Oriented Software, Addison-Wesley, 1994
 * Hiroshi Yuki. Learning Design Patterns in Java [In Japanese Language], Softbank publishing, 2004
 
-Licence
+License
 -------
 This project is licensed under the Creative Commons Zero (CC0) license. The model and code are completely free to use.
 
