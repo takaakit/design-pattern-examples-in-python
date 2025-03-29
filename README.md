@@ -71,7 +71,7 @@ Installation
 ------------
 **UML Modeling Tool**
 * Download the modeling tool [Astah](https://astah.net/download) UML/Professional **ver.10.0.0** or higher, and install.  
-* Download [m plus](https://sites.google.com/view/m-plus-plugin/download) plug-in **ver.3.0.0-preview** or higher, and add it to Astah.  
+* Download [m plus](https://sites.google.com/view/m-plus-plugin/download) plug-in **ver.3.1.3-preview.1** or higher, and add it to Astah.  
   [How to add plugins to Astah](https://astahblog.com/2014/12/15/astah_plugins/)
 
 **Python Development Environment**  
